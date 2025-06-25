@@ -33,8 +33,7 @@ COPY --from=pruner /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
 RUN pnpm install --frozen-lockfile
 
 # Installer les dépendances Python
-COPY --from=pruner /app/out/full/scripts/ ./scripts/
-COPY --from=pruner /app/out/full/scripts/requirements.txt ./scripts/
+COPY --from=pruner /app/scripts/ ./scripts/
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
 # =======================================
