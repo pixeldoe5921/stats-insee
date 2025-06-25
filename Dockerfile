@@ -62,7 +62,7 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Installer uniquement les dépendances Python de production
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
 COPY --from=installer /app/scripts/requirements.txt ./scripts/
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
