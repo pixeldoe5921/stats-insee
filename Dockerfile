@@ -17,7 +17,7 @@ WORKDIR /app
 
 COPY . .
 # Crée un sous-ensemble minimal du monorepo pour l'app 'web'
-RUN turbo prune --scope=web --docker
+RUN turbo prune --scope=@stats-insee/web --docker
 
 # =======================================
 # 3. Installer: Installe les dépendances
