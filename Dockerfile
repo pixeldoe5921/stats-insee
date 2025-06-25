@@ -1,55 +1,53 @@
-# Dockerfile pour Monorepo Turborepo avec pnpm
+# Dockerfile pour Monorepo Turborepo avec pnpm - Version Finale
 
 # =======================================
-# 1. Base: Installe les dépendances globales
+# 1. Base: Image de base avec Node.js
 # =======================================
 FROM node:20-alpine AS base
-
-# Installer pnpm, turbo, et les outils de build Python
-RUN npm i -g turbo pnpm
-RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
+WORKDIR /app
 
 # =======================================
 # 2. Pruner: Crée une version minimale du repo
 # =======================================
 FROM base AS pruner
-WORKDIR /app
-
+# Installer turbo pour la commande prune
+RUN npm i -g turbo
 COPY . .
-# Crée un sous-ensemble minimal du monorepo pour l'app 'web'
 RUN turbo prune --scope=@stats-insee/web --docker
 
 # =======================================
-# 3. Installer: Installe les dépendances
+# 3. Installer: Installe toutes les dépendances
 # =======================================
 FROM base AS installer
-WORKDIR /app
+# Installer pnpm et les outils de build Python
+RUN npm i -g pnpm
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
 
-# Copier les package.json et le lockfile depuis la version "prunée"
+# Copier les fichiers de dépendances depuis la version "prunée"
 COPY --from=pruner /app/out/json/ .
-COPY --from=pruner /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=pruner /app/out/pnpm-lock.yaml .
 
 # Installer les dépendances Node.js
 RUN pnpm install --frozen-lockfile
 
 # Installer les dépendances Python
-COPY --from=pruner /app/scripts/ ./scripts/
+COPY --from=pruner /app/out/full/scripts/requirements.txt ./scripts/
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
 # =======================================
-# 4. Builder: Compile l'application
+# 4. Builder: Compile l'application Next.js
 # =======================================
 FROM base AS builder
-WORKDIR /app
+# Installer pnpm et turbo
+RUN npm i -g pnpm turbo
 
-# Copier les dépendances installées
+# Copier les dépendances Node et Python installées
 COPY --from=installer /app/ .
-
 # Copier le code source "pruné"
 COPY --from=pruner /app/out/full/ .
 
-# Lancer le build pour l'app 'web'
-RUN turbo run build --scope=web
+# Lancer le build pour l'application 'web'
+RUN turbo run build --scope=@stats-insee/web
 
 # =======================================
 # 5. Runner: Image finale de production
@@ -61,23 +59,21 @@ WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Installer uniquement les dépendances Python de production
-RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
-COPY --from=installer /app/scripts/requirements.txt ./scripts/
-RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
+# Installer uniquement le runtime Python, pas les outils de build
+RUN apk add --no-cache python3
 
-# Copier le code de l'application compilée (standalone output)
+# Copier les dépendances Python pré-installées depuis l'étage 'installer'
+COPY --from=installer /usr/lib/python3.12/site-packages /usr/lib/python3.12/site-packages
+# Copier les scripts Python
+COPY --from=builder /app/scripts ./scripts
+
+# Copier l'application compilée en mode standalone
 COPY --from=builder /app/apps/web/.next/standalone ./
 # Copier les assets statiques
 COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
-# Copier les scripts Python
-COPY --from=installer /app/scripts ./scripts
 
-# Définir l'utilisateur non-root
 USER nextjs
-
 EXPOSE 3000
-
 ENV PORT 3000
 ENV NODE_ENV production
 
