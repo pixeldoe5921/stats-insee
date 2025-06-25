@@ -1,67 +1,85 @@
-# 🐳 Docker Multi-stage pour Dashboard INSEE
-# Optimisé pour production avec cache layers
+# Dockerfile pour Monorepo Turborepo avec pnpm
 
-# ===============================_
-# 🏗️ STAGE 1: Dependencies (pour l'étage final)
-# ===============================_
-FROM node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat
+# =======================================
+# 1. Base: Installe les dépendances globales
+# =======================================
+FROM node:20-alpine AS base
+
+# Installer pnpm, turbo, et les outils de build Python
+RUN npm i -g turbo pnpm
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
+
+# =======================================
+# 2. Pruner: Crée une version minimale du repo
+# =======================================
+FROM base AS pruner
 WORKDIR /app
-COPY package.json package-lock.json* tsconfig.json* ./
-RUN npm ci --only=production && npm cache clean --force
-
-# ===============================_
-# 🏗️ STAGE 2: Builder (pour la compilation)
-# ===============================_
-FROM node:20-alpine AS builder
-WORKDIR /app
-COPY package.json package-lock.json* tsconfig.json* ./
-
-# Installer TOUTES les dépendances, y compris devDependencies
-RUN npm ci && npm cache clean --force
 
 COPY . .
+# Crée un sous-ensemble minimal du monorepo pour l'app 'web'
+RUN turbo prune --scope=web --docker
 
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV NODE_ENV production
-RUN npm run build
+# =======================================
+# 3. Installer: Installe les dépendances
+# =======================================
+FROM base AS installer
+WORKDIR /app
 
-# ===============================_
-# 🚀 STAGE 3: Runner (Production)
-# ===============================_
+# Copier les package.json et le lockfile depuis la version "prunée"
+COPY --from=pruner /app/out/json/ .
+COPY --from=pruner /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+
+# Installer les dépendances Node.js
+RUN pnpm install --frozen-lockfile
+
+# Installer les dépendances Python
+COPY --from=pruner /app/out/full/scripts/requirements.txt ./scripts/
+RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
+
+# =======================================
+# 4. Builder: Compile l'application
+# =======================================
+FROM base AS builder
+WORKDIR /app
+
+# Copier les dépendances installées
+COPY --from=installer /app/ .
+
+# Copier le code source "pruné"
+COPY --from=pruner /app/out/full/ .
+
+# Lancer le build pour l'app 'web'
+RUN turbo run build --scope=web
+
+# =======================================
+# 5. Runner: Image finale de production
+# =======================================
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Security: Don't run as root
+# Créer un utilisateur non-root pour la sécurité
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copier uniquement les dépendances de production depuis l'étage deps
-COPY --from=deps /app/node_modules ./node_modules
-
-# Installer Python et ses dépendances de production
-RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
-COPY scripts/requirements.txt ./scripts/
+# Installer uniquement les dépendances Python de production
+RUN apk add --no-cache python3 py3-pip
+COPY --from=installer /app/scripts/requirements.txt ./scripts/
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
-# Copier l'application compilée depuis l'étage builder
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+# Copier le code de l'application compilée (standalone output)
+COPY --from=builder /app/apps/web/.next/standalone ./
+# Copier les assets statiques
+COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
+# Copier les scripts Python
 COPY --from=builder /app/scripts ./scripts
-COPY --from=builder /app/.env.example ./
-COPY --from=builder /app/supabase-setup.sql ./
 
-RUN chown -R nextjs:nodejs /app
+# Définir l'utilisateur non-root
 USER nextjs
 
 EXPOSE 3000
 
 ENV PORT 3000
-ENV HOSTNAME="0.0.0.0"
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV production
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 CMD node healthcheck.js || exit 1
-
+# Lancer l'application
 CMD ["node", "server.js"]
