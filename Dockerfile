@@ -2,7 +2,8 @@
 # Optimisé pour production avec cache layers
 
 # ================================
-# 🏗️ STAGE 1: Dependencies
+# 
+
 # ================================
 FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
@@ -18,10 +19,11 @@ RUN npm ci --only=production && npm cache clean --force
 
 # Install Python for scraping scripts
 RUN apk add --no-cache python3 py3-pip
-RUN pip3 install --no-cache-dir -r scripts/requirements.txt
+RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
 # ================================
-# 🏗️ STAGE 2: Builder
+# 
+
 # ================================
 FROM node:20-alpine AS builder
 WORKDIR /app
@@ -38,7 +40,8 @@ ENV NODE_ENV production
 RUN npm run build
 
 # ================================
-# 🚀 STAGE 3: Runner (Production)
+# 
+
 # ================================
 FROM node:20-alpine AS runner
 WORKDIR /app
@@ -52,7 +55,7 @@ RUN apk add --no-cache python3 py3-pip
 
 # Copy Python requirements and install
 COPY scripts/requirements.txt ./scripts/
-RUN pip3 install --no-cache-dir -r scripts/requirements.txt
+RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
 # Copy built application
 COPY --from=builder /app/public ./public
