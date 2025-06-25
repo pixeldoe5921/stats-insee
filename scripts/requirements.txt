@@ -1,0 +1,38 @@
+# 🐍 Requirements pour le Data Engineer
+# Script de scraping INSEE et pipeline de données
+
+# Core dependencies
+requests>=2.31.0
+pandas>=2.0.0
+supabase>=1.3.0
+schedule>=1.2.0
+
+# Data processing
+numpy>=1.24.0
+python-dateutil>=2.8.2
+
+# HTTP et APIs
+urllib3>=2.0.0
+certifi>=2023.0.0
+
+# Logging et monitoring
+python-json-logger>=2.0.7
+
+# Environment et configuration
+python-dotenv>=1.0.0
+
+# Testing (optionnel)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+requests-mock>=1.11.0
+
+# Eurostat (optionnel)
+eurostat>=1.0.0
+
+# Data export (optionnel)
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Performance monitoring
+memory-profiler>=0.61.0
+psutil>=5.9.0

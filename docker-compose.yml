@@ -1,0 +1,162 @@
+# 🐳 Docker Compose - Dashboard INSEE
+# Environnement de développement complet
+
+version: '3.8'
+
+services:
+  # ================================
+  # 🌐 Application Next.js
+  # ================================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    env_file:
+      - .env.local
+    volumes:
+      - ./scripts:/app/scripts
+      - logs:/app/logs
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # ================================
+  # 🗄️ Base de données PostgreSQL
+  # ================================
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: insee_dashboard
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./supabase-setup.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ================================
+  # 🚀 Cache Redis
+  # ================================
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # ================================
+  # 📊 Monitoring avec Grafana
+  # ================================
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana:/etc/grafana/provisioning
+    restart: unless-stopped
+
+  # ================================
+  # 📈 Metrics avec Prometheus
+  # ================================
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+
+  # ================================
+  # 🐍 Scraper INSEE (Cron Job)
+  # ================================
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deps
+    volumes:
+      - ./scripts:/app/scripts
+      - logs:/app/logs
+    environment:
+      - PYTHONPATH=/app/scripts
+    env_file:
+      - .env.local
+    command: python3 /app/scripts/insee_scraper.py --mode=scheduler
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  # ================================
+  # 🔍 Log Management avec Loki
+  # ================================
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    volumes:
+      - loki_data:/loki
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
+
+# ================================
+# 💾 Volumes persistants
+# ================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  grafana_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  loki_data:
+    driver: local
+  logs:
+    driver: local
+
+# ================================
+# 🌐 Networks
+# ================================
+networks:
+  default:
+    name: insee_dashboard_network

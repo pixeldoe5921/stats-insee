@@ -1,0 +1,115 @@
+name: 🚀 INSEE Dashboard - Deploy Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # 🔍 VALIDATION STRICTE (obligatoire)
+  validate:
+    name: 🔍 Quality Checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/web
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/web/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: 🔧 TypeScript Check (STRICT)
+        run: npm run type-check
+      
+      - name: 🧹 ESLint Check (STRICT)
+        run: npm run lint
+      
+      - name: 🧪 Unit Tests
+        run: npm run test
+      
+      - name: 📦 Build Check
+        run: npm run build
+
+  # 🎯 DEPLOY STAGING (si validation OK)
+  deploy-staging:
+    name: 🎯 Deploy to Staging
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to Vercel Staging
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: apps/web
+
+  # 🧪 TESTS E2E (sur staging)
+  e2e-tests:
+    name: 🧪 E2E Tests
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/web/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: apps/web
+        run: npm ci
+      
+      - name: Install Playwright
+        working-directory: apps/web
+        run: npx playwright install
+      
+      - name: Run E2E tests
+        working-directory: apps/web
+        run: npm run test:e2e
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ needs.deploy-staging.outputs.preview-url }}
+
+  # 🚀 DEPLOY PRODUCTION (seulement si tout OK)
+  deploy-production:
+    name: 🚀 Deploy to Production
+    needs: [validate, e2e-tests]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to Vercel Production
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: apps/web
+      
+      - name: 📱 Notify Success
+        if: success()
+        run: |
+          echo "✅ INSEE Dashboard deployed successfully to production!"
+          # Ici ajouter notification Discord/Slack si souhaité
