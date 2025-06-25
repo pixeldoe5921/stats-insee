@@ -18,7 +18,7 @@ COPY scripts/requirements.txt ./scripts/
 RUN npm ci --only=production && npm cache clean --force
 
 # Install Python for scraping scripts
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
 # ================================
@@ -51,7 +51,7 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Install Python for runtime scripts
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers
 
 # Copy Python requirements and install
 COPY scripts/requirements.txt ./scripts/
@@ -81,7 +81,7 @@ ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 
   CMD node healthcheck.js || exit 1
 
 # Start the application
