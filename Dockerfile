@@ -71,7 +71,7 @@ COPY --from=builder /app/apps/web/.next/standalone ./
 # Copier les assets statiques
 COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
 # Copier les scripts Python
-COPY --from=builder /app/scripts ./scripts
+COPY --from=installer /app/scripts ./scripts
 
 # Définir l'utilisateur non-root
 USER nextjs
