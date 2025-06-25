@@ -7,7 +7,7 @@
 FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json package-lock.json* ./
+COPY package.json package-lock.json* tsconfig.json* ./
 RUN npm ci --only=production && npm cache clean --force
 
 # ===============================_
@@ -15,7 +15,7 @@ RUN npm ci --only=production && npm cache clean --force
 # ===============================_
 FROM node:20-alpine AS builder
 WORKDIR /app
-COPY package.json package-lock.json* ./
+COPY package.json package-lock.json* tsconfig.json* ./
 
 # Installer TOUTES les dépendances, y compris devDependencies
 RUN npm ci && npm cache clean --force
