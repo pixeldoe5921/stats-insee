@@ -13,11 +13,11 @@ RUN turbo prune --docker --scope @stats-insee/web
 FROM base AS installer
 
 # Dépendances nécessaires à canvas & autres libs Python natives
-RUN apk add --no-cache 
-  g++ 
-  make 
-  python3 py3-pip gcc musl-dev linux-headers 
-  python3-dev pkgconfig pixman-dev cairo-dev 
+RUN apk add --no-cache \
+  g++ \
+  make \
+  python3 py3-pip gcc musl-dev linux-headers \
+  python3-dev pkgconfig pixman-dev cairo-dev \
   pango-dev libjpeg-turbo-dev giflib-dev
 
 # Copier uniquement les fichiers issus du prune
