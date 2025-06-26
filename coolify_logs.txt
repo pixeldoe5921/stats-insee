@@ -1,1199 +1,1171 @@
-2025-Jun-26 07:36:30.373852
+2025-Jun-26 07:51:16.738169
 Starting deployment of pixeldoe5921/stats-insee:main to localhost.
-2025-Jun-26 07:36:30.615564
+2025-Jun-26 07:51:16.977878
 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.8.
-2025-Jun-26 07:36:32.791147
+2025-Jun-26 07:51:19.031242
 ----------------------------------------
-2025-Jun-26 07:36:32.798430
-Importing pixeldoe5921/stats-insee:main (commit sha HEAD) to /artifacts/v04w4o0wgks040g0c8ocskoo.
-2025-Jun-26 07:36:36.595053
+2025-Jun-26 07:51:19.041143
+Importing pixeldoe5921/stats-insee:main (commit sha HEAD) to /artifacts/e4oswsk408goksgo4wckocgc.
+2025-Jun-26 07:51:20.866413
+Image not found (rw8ko4o8s8ckgo4g0s00g0kc:d6f18a69c8e2ea17d72ce7e40dd73288cac42a92). Building new image.
+2025-Jun-26 07:51:22.909164
 ----------------------------------------
-2025-Jun-26 07:36:36.603136
+2025-Jun-26 07:51:22.914464
 Building docker image started.
-2025-Jun-26 07:36:36.612788
+2025-Jun-26 07:51:22.921669
 To check the current progress, click on Show Debug Logs.
-2025-Jun-26 07:40:22.984817
+2025-Jun-26 07:54:52.289419
 Oops something is not okay, are you okay? 😢
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #0 building with "default" instance using docker driver
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #1 [internal] load build definition from Dockerfile
-2025-Jun-26 07:40:22.998040
-#1 transferring dockerfile: 1.86kB done
-2025-Jun-26 07:40:22.998040
-#1 DONE 0.0s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#1 transferring dockerfile: 1.87kB 0.0s done
+2025-Jun-26 07:54:52.311985
+#1 DONE 0.1s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #2 [internal] load metadata for docker.io/library/node:20-alpine
-2025-Jun-26 07:40:22.998040
-#2 DONE 0.7s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#2 DONE 0.8s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #3 [internal] load .dockerignore
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #3 transferring context: 2B done
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #3 DONE 0.0s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #4 [base 1/4] FROM docker.io/library/node:20-alpine@sha256:674181320f4f94582c6182eaa151bf92c6744d478be0f1d12db804b7d59b2d11
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #4 DONE 0.0s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #5 [base 2/4] WORKDIR /app
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #5 CACHED
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#6 [internal] load build context
-2025-Jun-26 07:40:22.998040
-#6 transferring context: 1.08MB 0.1s done
-2025-Jun-26 07:40:22.998040
-#6 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#7 [runner 3/4] RUN addgroup --system --gid 1001 nodejs  && adduser --system --uid 1001 nextjs
-2025-Jun-26 07:40:22.998040
-#7 DONE 0.2s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#8 [base 3/4] RUN apk add --no-cache git
-2025-Jun-26 07:40:22.998040
-#8 0.169 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:40:22.998040
-#8 0.348 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:40:22.998040
-#8 0.933 (1/12) Installing brotli-libs (1.1.0-r2)
-2025-Jun-26 07:40:22.998040
-#8 0.974 (2/12) Installing c-ares (1.34.5-r0)
-2025-Jun-26 07:40:22.998040
-#8 0.996 (3/12) Installing libunistring (1.3-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.042 (4/12) Installing libidn2 (2.3.7-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.063 (5/12) Installing nghttp2-libs (1.65.0-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.082 (6/12) Installing libpsl (0.21.5-r3)
-2025-Jun-26 07:40:22.998040
-#8 1.100 (7/12) Installing zstd-libs (1.5.7-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.133 (8/12) Installing libcurl (8.14.1-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.165 (9/12) Installing libexpat (2.7.1-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.181 (10/12) Installing pcre2 (10.43-r1)
-2025-Jun-26 07:40:22.998040
-#8 1.214 (11/12) Installing git (2.49.0-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.390 (12/12) Installing git-init-template (2.49.0-r0)
-2025-Jun-26 07:40:22.998040
-#8 1.409 Executing busybox-1.37.0-r18.trigger
-2025-Jun-26 07:40:22.998040
-#8 1.444 OK: 22 MiB in 30 packages
-2025-Jun-26 07:40:22.998040
-#8 DONE 1.7s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#9 [base 4/4] RUN npm i -g turbo pnpm
-2025-Jun-26 07:40:22.998040
-#9 5.565
-2025-Jun-26 07:40:22.998040
-#9 5.565 added 3 packages in 5s
-2025-Jun-26 07:40:22.998040
-#9 5.566
-2025-Jun-26 07:40:22.998040
-#9 5.566 1 package is looking for funding
-2025-Jun-26 07:40:22.998040
-#9 5.566   run `npm fund` for details
-2025-Jun-26 07:40:22.998040
-#9 5.571 npm notice
-2025-Jun-26 07:40:22.998040
-#9 5.571 npm notice New major version of npm available! 10.8.2 -> 11.4.2
-2025-Jun-26 07:40:22.998040
-#9 5.571 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
-2025-Jun-26 07:40:22.998040
-#9 5.571 npm notice To update run: npm install -g npm@11.4.2
-2025-Jun-26 07:40:22.998040
-#9 5.571 npm notice
-2025-Jun-26 07:40:22.998040
-#9 DONE 5.7s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#10 [builder 1/5] WORKDIR /app
-2025-Jun-26 07:40:22.998040
-#10 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#6 [base 3/4] RUN apk add --no-cache git
+2025-Jun-26 07:54:52.311985
+#6 CACHED
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#7 [base 4/4] RUN npm i -g turbo pnpm
+2025-Jun-26 07:54:52.311985
+#7 CACHED
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#8 [runner 3/4] RUN addgroup --system --gid 1001 nodejs  && adduser --system --uid 1001 nextjs
+2025-Jun-26 07:54:52.311985
+#8 CACHED
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#9 [internal] load build context
+2025-Jun-26 07:54:52.311985
+#9 transferring context: 1.08MB 0.1s done
+2025-Jun-26 07:54:52.311985
+#9 DONE 0.1s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#10 [installer 1/7] RUN apk add --no-cache   make   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
+2025-Jun-26 07:54:52.311985
+#10 ...
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #11 [pruner 1/2] COPY . .
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 #11 DONE 0.2s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#10 [installer 1/7] RUN apk add --no-cache   make   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
+2025-Jun-26 07:54:52.311985
+#10 0.186 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:54:52.311985
+#10 0.375 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:54:52.311985
+#10 1.142 (1/136) Installing cairo-tools (1.18.4-r0)
+2025-Jun-26 07:54:52.311985
+#10 ...
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #12 [pruner 2/2] RUN turbo prune --docker --scope @stats-insee/web
-2025-Jun-26 07:40:22.998040
-#12 0.269  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
-2025-Jun-26 07:40:22.998040
-#12 0.292
-2025-Jun-26 07:40:22.998040
-#12 0.292 Attention:
-2025-Jun-26 07:40:22.998040
-#12 0.292 Turborepo now collects completely anonymous telemetry regarding usage.
-2025-Jun-26 07:40:22.998040
-#12 0.292 This information is used to shape the Turborepo roadmap and prioritize features.
-2025-Jun-26 07:40:22.998040
-#12 0.292 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-2025-Jun-26 07:40:22.998040
-#12 0.292 https://turborepo.com/docs/telemetry
-2025-Jun-26 07:40:22.998040
-#12 0.292
-2025-Jun-26 07:40:22.998040
-#12 0.292 turbo 2.5.4
-2025-Jun-26 07:40:22.998040
-#12 0.292
-2025-Jun-26 07:40:22.998040
-#12 0.396 Generating pruned monorepo for @stats-insee/web in /app/out
-2025-Jun-26 07:40:22.998040
-#12 0.425  - Added @stats-insee/web
-2025-Jun-26 07:40:22.998040
-#12 DONE 0.9s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#13 [installer 1/7] RUN apk add --no-cache   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
-2025-Jun-26 07:40:22.998040
-#13 0.197 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:40:22.998040
-#13 0.448 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:40:22.998040
-#13 1.252 (1/135) Installing cairo-tools (1.18.4-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.295 (2/135) Installing libbz2 (1.0.8-r6)
-2025-Jun-26 07:40:22.998040
-#13 1.321 (3/135) Installing libpng (1.6.47-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.356 (4/135) Installing freetype (2.13.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.390 (5/135) Installing fontconfig (2.15.0-r3)
-2025-Jun-26 07:40:22.998040
-#13 1.467 (6/135) Installing expat (2.7.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.508 (7/135) Installing pkgconf (2.4.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.551 (8/135) Installing expat-dev (2.7.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.576 (9/135) Installing bzip2-dev (1.0.8-r6)
-2025-Jun-26 07:40:22.998040
-#13 1.597 (10/135) Installing brotli (1.1.0-r2)
-2025-Jun-26 07:40:22.998040
-#13 1.619 (11/135) Installing brotli-dev (1.1.0-r2)
-2025-Jun-26 07:40:22.998040
-#13 1.643 (12/135) Installing zlib-dev (1.3.1-r2)
-2025-Jun-26 07:40:22.998040
-#13 1.665 (13/135) Installing libpng-dev (1.6.47-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.693 (14/135) Installing freetype-dev (2.13.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.739 (15/135) Installing fontconfig-dev (2.15.0-r3)
-2025-Jun-26 07:40:22.998040
-#13 1.763 (16/135) Installing libxau (1.0.12-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.785 (17/135) Installing xorgproto (2024.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.865 (18/135) Installing libxau-dev (1.0.12-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.886 (19/135) Installing libmd (1.1.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.914 (20/135) Installing libbsd (0.12.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 1.936 (21/135) Installing libxdmcp (1.1.5-r1)
-2025-Jun-26 07:40:22.998040
-#13 1.957 (22/135) Installing libxcb (1.17.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.003 (23/135) Installing libx11 (1.8.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.132 (24/135) Installing libxext (1.3.6-r2)
-2025-Jun-26 07:40:22.998040
-#13 2.154 (25/135) Installing libffi (3.4.8-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.175 (26/135) Installing gdbm (1.24-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.198 (27/135) Installing xz-libs (5.8.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.226 (28/135) Installing mpdecimal (4.0.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.273 (29/135) Installing ncurses-terminfo-base (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.303 (30/135) Installing libncursesw (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.333 (31/135) Installing libpanelw (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.353 (32/135) Installing readline (8.2.13-r1)
-2025-Jun-26 07:40:22.998040
-#13 2.382 (33/135) Installing sqlite-libs (3.49.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 2.493 (34/135) Installing python3 (3.12.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.034 (35/135) Installing python3-pycache-pyc0 (3.12.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.344 (36/135) Installing pyc (3.12.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.344 (37/135) Installing xcb-proto-pyc (1.17.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.377 (38/135) Installing python3-pyc (3.12.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.377 (39/135) Installing xcb-proto (1.17.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.420 (40/135) Installing libxdmcp-dev (1.1.5-r1)
-2025-Jun-26 07:40:22.998040
-#13 3.444 (41/135) Installing libxcb-dev (1.17.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.502 (42/135) Installing xtrans (1.5.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.530 (43/135) Installing libx11-dev (1.8.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.560 (44/135) Installing libxext-dev (1.3.6-r2)
-2025-Jun-26 07:40:22.998040
-#13 3.587 (45/135) Installing libxrender (0.9.12-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.609 (46/135) Installing libxrender-dev (0.9.12-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.634 (47/135) Installing pixman (0.46.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.668 (48/135) Installing pixman-dev (0.46.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.691 (49/135) Installing util-macros (1.20.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.715 (50/135) Installing xcb-util (0.4.1-r3)
-2025-Jun-26 07:40:22.998040
-#13 3.737 (51/135) Installing xcb-util-dev (0.4.1-r3)
-2025-Jun-26 07:40:22.998040
-#13 3.761 (52/135) Installing cairo (1.18.4-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.807 (53/135) Installing libintl (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.831 (54/135) Installing libeconf (0.6.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 3.853 (55/135) Installing libblkid (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 3.880 (56/135) Installing libmount (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 3.908 (57/135) Installing glib (2.84.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 4.042 (58/135) Installing cairo-gobject (1.18.4-r0)
-2025-Jun-26 07:40:22.998040
-#13 4.067 (59/135) Installing libxml2 (2.13.8-r0)
-2025-Jun-26 07:40:22.998040
-#13 4.110 (60/135) Installing libxml2-utils (2.13.8-r0)
-2025-Jun-26 07:40:22.998040
-#13 4.133 (61/135) Installing docbook-xml (4.5-r10)
-2025-Jun-26 07:40:22.998040
-#13 4.208 Executing docbook-xml-4.5-r10.post-install
-2025-Jun-26 07:40:22.998040
-#13 4.239 (62/135) Installing libxslt (1.1.43-r3)
-2025-Jun-26 07:40:22.998040
-#13 4.272 (63/135) Installing docbook-xsl-ns (1.79.2-r11)
-2025-Jun-26 07:40:22.998040
-#13 4.670 Executing docbook-xsl-ns-1.79.2-r11.post-install
-2025-Jun-26 07:40:22.998040
-#13 4.721 (64/135) Installing docbook-xsl-nons (1.79.2-r11)
-2025-Jun-26 07:40:22.998040
-#13 5.177 Executing docbook-xsl-nons-1.79.2-r11.post-install
-2025-Jun-26 07:40:22.998040
-#13 5.245 (65/135) Installing docbook-xsl (1.79.2-r11)
-2025-Jun-26 07:40:22.998040
-#13 5.266 (66/135) Installing xz (5.8.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.298 (67/135) Installing gettext-asprintf (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.321 (68/135) Installing gettext-libs (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.367 (69/135) Installing gettext-envsubst (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.393 (70/135) Installing libgomp (14.2.0-r6)
-2025-Jun-26 07:40:22.998040
-#13 5.425 (71/135) Installing gettext (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.513 (72/135) Installing gettext-dev (0.24.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.590 (73/135) Installing py3-parsing (3.2.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.623 (74/135) Installing py3-parsing-pyc (3.2.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.661 (75/135) Installing py3-packaging (25.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.691 (76/135) Installing py3-packaging-pyc (25.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 5.721 (77/135) Installing linux-headers (6.14.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.067 (78/135) Installing libffi-dev (3.4.8-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.115 (79/135) Installing bsd-compat-headers (0.7.2-r6)
-2025-Jun-26 07:40:22.998040
-#13 6.144 (80/135) Installing libformw (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.168 (81/135) Installing libmenuw (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.192 (82/135) Installing libncurses++ (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.217 (83/135) Installing ncurses-dev (6.5_p20250503-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.262 (84/135) Installing libedit (20250104.3.1-r1)
-2025-Jun-26 07:40:22.998040
-#13 6.295 (85/135) Installing libedit-dev (20250104.3.1-r1)
-2025-Jun-26 07:40:22.998040
-#13 6.321 (86/135) Installing libpcre2-16 (10.43-r1)
-2025-Jun-26 07:40:22.998040
-#13 6.367 (87/135) Installing libpcre2-32 (10.43-r1)
-2025-Jun-26 07:40:22.998040
-#13 6.406 (88/135) Installing pcre2-dev (10.43-r1)
-2025-Jun-26 07:40:22.998040
-#13 6.431 (89/135) Installing libuuid (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 6.454 (90/135) Installing libfdisk (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 6.488 (91/135) Installing liblastlog2 (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 6.512 (92/135) Installing libsmartcols (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 6.538 (93/135) Installing sqlite (3.49.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.646 (94/135) Installing sqlite-dev (3.49.2-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.682 (95/135) Installing util-linux-dev (2.41-r9)
-2025-Jun-26 07:40:22.998040
-#13 6.709 (96/135) Installing glib-dev (2.84.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 6.978 (97/135) Installing cairo-dev (1.18.4-r0)
-2025-Jun-26 07:40:22.998040
-#13 7.010 (98/135) Installing jansson (2.14.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 7.036 (99/135) Installing binutils (2.44-r0)
-2025-Jun-26 07:40:22.998040
-#13 7.369 (100/135) Installing libatomic (14.2.0-r6)
-2025-Jun-26 07:40:22.998040
-#13 7.390 (101/135) Installing gmp (6.3.0-r3)
-2025-Jun-26 07:40:22.998040
-#13 7.426 (102/135) Installing isl26 (0.26-r1)
-2025-Jun-26 07:40:22.998040
-#13 7.529 (103/135) Installing mpfr4 (4.2.1_p1-r0)
-2025-Jun-26 07:40:22.998040
-#13 7.575 (104/135) Installing mpc1 (1.3.1-r1)
-2025-Jun-26 07:40:22.998040
-#13 7.600 (105/135) Installing gcc (14.2.0-r6)
-2025-Jun-26 07:40:22.998040
-#13 12.65 (106/135) Installing giflib (5.2.2-r1)
-2025-Jun-26 07:40:22.998040
-#13 12.67 (107/135) Installing giflib-dev (5.2.2-r1)
-2025-Jun-26 07:40:22.998040
-#13 12.70 (108/135) Installing libjpeg-turbo (3.1.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 12.76 (109/135) Installing libturbojpeg (3.1.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 12.83 (110/135) Installing libjpeg-turbo-dev (3.1.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 12.87 (111/135) Installing musl-dev (1.2.5-r10)
-2025-Jun-26 07:40:22.998040
-#13 13.46 (112/135) Installing libxft (2.3.8-r3)
-2025-Jun-26 07:40:22.998040
-#13 13.49 (113/135) Installing graphite2 (1.3.14-r6)
-2025-Jun-26 07:40:22.998040
-#13 13.52 (114/135) Installing harfbuzz (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.63 (115/135) Installing fribidi (1.0.16-r1)
-2025-Jun-26 07:40:22.998040
-#13 13.65 (116/135) Installing pango (1.56.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.71 (117/135) Installing pango-tools (1.56.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.73 (118/135) Installing fribidi-dev (1.0.16-r1)
-2025-Jun-26 07:40:22.998040
-#13 13.77 (119/135) Installing harfbuzz-cairo (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.80 (120/135) Installing harfbuzz-gobject (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.82 (121/135) Installing icu-data-en (76.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 13.98 Executing icu-data-en-76.1-r0.post-install
-2025-Jun-26 07:40:22.998040
-#13 14.06 (122/135) Installing icu-libs (76.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 14.06 *
-2025-Jun-26 07:40:22.998040
-#13 14.06 * If you need ICU with non-English locales and legacy charset support, install
-2025-Jun-26 07:40:22.998040
-#13 14.06 * package icu-data-full.
-2025-Jun-26 07:40:22.998040
-#13 14.06 *
-2025-Jun-26 07:40:22.998040
-#13 14.44 (123/135) Installing harfbuzz-icu (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 14.47 (124/135) Installing harfbuzz-subset (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 14.59 (125/135) Installing graphite2-dev (1.3.14-r6)
-2025-Jun-26 07:40:22.998040
-#13 14.62 (126/135) Installing icu (76.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 14.71 (127/135) Installing icu-dev (76.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 14.93 (128/135) Installing harfbuzz-dev (11.2.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 15.01 (129/135) Installing libxft-dev (2.3.8-r3)
-2025-Jun-26 07:40:22.998040
-#13 15.05 (130/135) Installing pango-dev (1.56.3-r0)
-2025-Jun-26 07:40:22.998040
-#13 15.11 (131/135) Installing py3-setuptools (80.9.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 15.42 (132/135) Installing py3-setuptools-pyc (80.9.0-r0)
-2025-Jun-26 07:40:22.998040
-#13 15.83 (133/135) Installing py3-pip (25.1.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 16.30 (134/135) Installing py3-pip-pyc (25.1.1-r0)
-2025-Jun-26 07:40:22.998040
-#13 16.75 (135/135) Installing python3-dev (3.12.11-r0)
-2025-Jun-26 07:40:22.998040
-#13 18.53 Executing busybox-1.37.0-r18.trigger
-2025-Jun-26 07:40:22.998040
-#13 18.56 Executing glib-2.84.3-r0.trigger
-2025-Jun-26 07:40:22.998040
-#13 18.58 No schema files found: doing nothing.
-2025-Jun-26 07:40:22.998040
-#13 18.62 OK: 383 MiB in 165 packages
-2025-Jun-26 07:40:22.998040
-#13 DONE 19.4s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#14 [installer 2/7] WORKDIR /app
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#12 0.297  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
+2025-Jun-26 07:54:52.311985
+#12 0.341
+2025-Jun-26 07:54:52.311985
+#12 0.341 Attention:
+2025-Jun-26 07:54:52.311985
+#12 0.341 Turborepo now collects completely anonymous telemetry regarding usage.
+2025-Jun-26 07:54:52.311985
+#12 0.341 This information is used to shape the Turborepo roadmap and prioritize features.
+2025-Jun-26 07:54:52.311985
+#12 0.341 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-Jun-26 07:54:52.311985
+#12 0.341 https://turborepo.com/docs/telemetry
+2025-Jun-26 07:54:52.311985
+#12 0.341
+2025-Jun-26 07:54:52.311985
+#12 0.341 turbo 2.5.4
+2025-Jun-26 07:54:52.311985
+#12 0.341
+2025-Jun-26 07:54:52.311985
+#12 0.526 Generating pruned monorepo for @stats-insee/web in /app/out
+2025-Jun-26 07:54:52.311985
+#12 0.569  - Added @stats-insee/web
+2025-Jun-26 07:54:52.311985
+#12 DONE 1.0s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#10 [installer 1/7] RUN apk add --no-cache   make   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
+2025-Jun-26 07:54:52.311985
+#10 1.172 (2/136) Installing libbz2 (1.0.8-r6)
+2025-Jun-26 07:54:52.311985
+#10 1.189 (3/136) Installing libpng (1.6.47-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.212 (4/136) Installing freetype (2.13.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.242 (5/136) Installing fontconfig (2.15.0-r3)
+2025-Jun-26 07:54:52.311985
+#10 1.316 (6/136) Installing expat (2.7.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.335 (7/136) Installing pkgconf (2.4.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.356 (8/136) Installing expat-dev (2.7.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.373 (9/136) Installing bzip2-dev (1.0.8-r6)
+2025-Jun-26 07:54:52.311985
+#10 1.388 (10/136) Installing brotli (1.1.0-r2)
+2025-Jun-26 07:54:52.311985
+#10 1.404 (11/136) Installing brotli-dev (1.1.0-r2)
+2025-Jun-26 07:54:52.311985
+#10 1.421 (12/136) Installing zlib-dev (1.3.1-r2)
+2025-Jun-26 07:54:52.311985
+#10 1.439 (13/136) Installing libpng-dev (1.6.47-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.461 (14/136) Installing freetype-dev (2.13.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.506 (15/136) Installing fontconfig-dev (2.15.0-r3)
+2025-Jun-26 07:54:52.311985
+#10 1.523 (16/136) Installing libxau (1.0.12-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.538 (17/136) Installing xorgproto (2024.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.615 (18/136) Installing libxau-dev (1.0.12-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.631 (19/136) Installing libmd (1.1.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.646 (20/136) Installing libbsd (0.12.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.663 (21/136) Installing libxdmcp (1.1.5-r1)
+2025-Jun-26 07:54:52.311985
+#10 1.677 (22/136) Installing libxcb (1.17.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.714 (23/136) Installing libx11 (1.8.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.817 (24/136) Installing libxext (1.3.6-r2)
+2025-Jun-26 07:54:52.311985
+#10 1.833 (25/136) Installing libffi (3.4.8-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.848 (26/136) Installing gdbm (1.24-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.865 (27/136) Installing xz-libs (5.8.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.887 (28/136) Installing mpdecimal (4.0.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.907 (29/136) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.932 (30/136) Installing libncursesw (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.956 (31/136) Installing libpanelw (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 1.971 (32/136) Installing readline (8.2.13-r1)
+2025-Jun-26 07:54:52.311985
+#10 1.994 (33/136) Installing sqlite-libs (3.49.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.046 (34/136) Installing python3 (3.12.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.494 (35/136) Installing python3-pycache-pyc0 (3.12.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.773 (36/136) Installing pyc (3.12.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.773 (37/136) Installing xcb-proto-pyc (1.17.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.801 (38/136) Installing python3-pyc (3.12.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.801 (39/136) Installing xcb-proto (1.17.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.832 (40/136) Installing libxdmcp-dev (1.1.5-r1)
+2025-Jun-26 07:54:52.311985
+#10 2.849 (41/136) Installing libxcb-dev (1.17.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.899 (42/136) Installing xtrans (1.5.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.919 (43/136) Installing libx11-dev (1.8.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.941 (44/136) Installing libxext-dev (1.3.6-r2)
+2025-Jun-26 07:54:52.311985
+#10 2.961 (45/136) Installing libxrender (0.9.12-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.977 (46/136) Installing libxrender-dev (0.9.12-r0)
+2025-Jun-26 07:54:52.311985
+#10 2.994 (47/136) Installing pixman (0.46.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.021 (48/136) Installing pixman-dev (0.46.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.037 (49/136) Installing util-macros (1.20.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.054 (50/136) Installing xcb-util (0.4.1-r3)
+2025-Jun-26 07:54:52.311985
+#10 3.068 (51/136) Installing xcb-util-dev (0.4.1-r3)
+2025-Jun-26 07:54:52.311985
+#10 3.085 (52/136) Installing cairo (1.18.4-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.124 (53/136) Installing libintl (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.141 (54/136) Installing libeconf (0.6.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.157 (55/136) Installing libblkid (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 3.179 (56/136) Installing libmount (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 3.202 (57/136) Installing glib (2.84.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.307 (58/136) Installing cairo-gobject (1.18.4-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.323 (59/136) Installing libxml2 (2.13.8-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.365 (60/136) Installing libxml2-utils (2.13.8-r0)
+2025-Jun-26 07:54:52.311985
+#10 3.383 (61/136) Installing docbook-xml (4.5-r10)
+2025-Jun-26 07:54:52.311985
+#10 3.449 Executing docbook-xml-4.5-r10.post-install
+2025-Jun-26 07:54:52.311985
+#10 3.476 (62/136) Installing libxslt (1.1.43-r3)
+2025-Jun-26 07:54:52.311985
+#10 3.502 (63/136) Installing docbook-xsl-ns (1.79.2-r11)
+2025-Jun-26 07:54:52.311985
+#10 3.910 Executing docbook-xsl-ns-1.79.2-r11.post-install
+2025-Jun-26 07:54:52.311985
+#10 4.006 (64/136) Installing docbook-xsl-nons (1.79.2-r11)
+2025-Jun-26 07:54:52.311985
+#10 4.417 Executing docbook-xsl-nons-1.79.2-r11.post-install
+2025-Jun-26 07:54:52.311985
+#10 4.489 (65/136) Installing docbook-xsl (1.79.2-r11)
+2025-Jun-26 07:54:52.311985
+#10 4.505 (66/136) Installing xz (5.8.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.532 (67/136) Installing gettext-asprintf (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.550 (68/136) Installing gettext-libs (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.583 (69/136) Installing gettext-envsubst (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.599 (70/136) Installing libgomp (14.2.0-r6)
+2025-Jun-26 07:54:52.311985
+#10 4.627 (71/136) Installing gettext (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.699 (72/136) Installing gettext-dev (0.24.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.772 (73/136) Installing py3-parsing (3.2.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.803 (74/136) Installing py3-parsing-pyc (3.2.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.836 (75/136) Installing py3-packaging (25.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.862 (76/136) Installing py3-packaging-pyc (25.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 4.893 (77/136) Installing linux-headers (6.14.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.206 (78/136) Installing libffi-dev (3.4.8-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.230 (79/136) Installing bsd-compat-headers (0.7.2-r6)
+2025-Jun-26 07:54:52.311985
+#10 5.246 (80/136) Installing libformw (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.264 (81/136) Installing libmenuw (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.283 (82/136) Installing libncurses++ (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.301 (83/136) Installing ncurses-dev (6.5_p20250503-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.332 (84/136) Installing libedit (20250104.3.1-r1)
+2025-Jun-26 07:54:52.311985
+#10 5.352 (85/136) Installing libedit-dev (20250104.3.1-r1)
+2025-Jun-26 07:54:52.311985
+#10 5.368 (86/136) Installing libpcre2-16 (10.43-r1)
+2025-Jun-26 07:54:52.311985
+#10 5.402 (87/136) Installing libpcre2-32 (10.43-r1)
+2025-Jun-26 07:54:52.311985
+#10 5.433 (88/136) Installing pcre2-dev (10.43-r1)
+2025-Jun-26 07:54:52.311985
+#10 5.452 (89/136) Installing libuuid (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 5.469 (90/136) Installing libfdisk (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 5.495 (91/136) Installing liblastlog2 (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 5.520 (92/136) Installing libsmartcols (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 5.546 (93/136) Installing sqlite (3.49.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.607 (94/136) Installing sqlite-dev (3.49.2-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.636 (95/136) Installing util-linux-dev (2.41-r9)
+2025-Jun-26 07:54:52.311985
+#10 5.660 (96/136) Installing glib-dev (2.84.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.889 (97/136) Installing cairo-dev (1.18.4-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.914 (98/136) Installing jansson (2.14.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 5.934 (99/136) Installing binutils (2.44-r0)
+2025-Jun-26 07:54:52.311985
+#10 6.158 (100/136) Installing libatomic (14.2.0-r6)
+2025-Jun-26 07:54:52.311985
+#10 6.174 (101/136) Installing gmp (6.3.0-r3)
+2025-Jun-26 07:54:52.311985
+#10 6.199 (102/136) Installing isl26 (0.26-r1)
+2025-Jun-26 07:54:52.311985
+#10 6.257 (103/136) Installing mpfr4 (4.2.1_p1-r0)
+2025-Jun-26 07:54:52.311985
+#10 6.288 (104/136) Installing mpc1 (1.3.1-r1)
+2025-Jun-26 07:54:52.311985
+#10 6.307 (105/136) Installing gcc (14.2.0-r6)
+2025-Jun-26 07:54:52.311985
+#10 8.800 (106/136) Installing giflib (5.2.2-r1)
+2025-Jun-26 07:54:52.311985
+#10 8.819 (107/136) Installing giflib-dev (5.2.2-r1)
+2025-Jun-26 07:54:52.311985
+#10 8.838 (108/136) Installing libjpeg-turbo (3.1.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 8.869 (109/136) Installing libturbojpeg (3.1.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 8.899 (110/136) Installing libjpeg-turbo-dev (3.1.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 8.922 (111/136) Installing make (4.4.1-r3)
+2025-Jun-26 07:54:52.311985
+#10 8.947 (112/136) Installing musl-dev (1.2.5-r10)
+2025-Jun-26 07:54:52.311985
+#10 9.162 (113/136) Installing libxft (2.3.8-r3)
+2025-Jun-26 07:54:52.311985
+#10 9.180 (114/136) Installing graphite2 (1.3.14-r6)
+2025-Jun-26 07:54:52.311985
+#10 9.198 (115/136) Installing harfbuzz (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.239 (116/136) Installing fribidi (1.0.16-r1)
+2025-Jun-26 07:54:52.311985
+#10 9.257 (117/136) Installing pango (1.56.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.286 (118/136) Installing pango-tools (1.56.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.303 (119/136) Installing fribidi-dev (1.0.16-r1)
+2025-Jun-26 07:54:52.311985
+#10 9.325 (120/136) Installing harfbuzz-cairo (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.342 (121/136) Installing harfbuzz-gobject (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.358 (122/136) Installing icu-data-en (76.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.417 Executing icu-data-en-76.1-r0.post-install
+2025-Jun-26 07:54:52.311985
+#10 9.426 *
+2025-Jun-26 07:54:52.311985
+#10 9.426 * If you need ICU with non-English locales and legacy charset support, install
+2025-Jun-26 07:54:52.311985
+#10 9.426 * package icu-data-full.
+2025-Jun-26 07:54:52.311985
+#10 9.426 *
+2025-Jun-26 07:54:52.311985
+#10 9.426 (123/136) Installing icu-libs (76.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.528 (124/136) Installing harfbuzz-icu (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.543 (125/136) Installing harfbuzz-subset (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.586 (126/136) Installing graphite2-dev (1.3.14-r6)
+2025-Jun-26 07:54:52.311985
+#10 9.605 (127/136) Installing icu (76.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.651 (128/136) Installing icu-dev (76.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.768 (129/136) Installing harfbuzz-dev (11.2.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.808 (130/136) Installing libxft-dev (2.3.8-r3)
+2025-Jun-26 07:54:52.311985
+#10 9.826 (131/136) Installing pango-dev (1.56.3-r0)
+2025-Jun-26 07:54:52.311985
+#10 9.869 (132/136) Installing py3-setuptools (80.9.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 10.06 (133/136) Installing py3-setuptools-pyc (80.9.0-r0)
+2025-Jun-26 07:54:52.311985
+#10 10.22 (134/136) Installing py3-pip (25.1.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 10.40 (135/136) Installing py3-pip-pyc (25.1.1-r0)
+2025-Jun-26 07:54:52.311985
+#10 10.57 (136/136) Installing python3-dev (3.12.11-r0)
+2025-Jun-26 07:54:52.311985
+#10 11.31 Executing busybox-1.37.0-r18.trigger
+2025-Jun-26 07:54:52.311985
+#10 11.34 Executing glib-2.84.3-r0.trigger
+2025-Jun-26 07:54:52.311985
+#10 11.35 No schema files found: doing nothing.
+2025-Jun-26 07:54:52.311985
+#10 11.37 OK: 383 MiB in 166 packages
+2025-Jun-26 07:54:52.311985
+#10 DONE 12.0s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#13 [installer 2/7] WORKDIR /app
+2025-Jun-26 07:54:52.311985
+#13 DONE 0.1s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#14 [installer 3/7] COPY --from=pruner /app/out/json/ .
+2025-Jun-26 07:54:52.311985
 #14 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#15 [installer 3/7] COPY --from=pruner /app/out/json/ .
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#15 [installer 4/7] COPY --from=pruner /app/out/pnpm-lock.yaml .
+2025-Jun-26 07:54:52.311985
 #15 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#16 [installer 4/7] COPY --from=pruner /app/out/pnpm-lock.yaml .
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#16 [installer 5/7] COPY --from=pruner /app/scripts/ ./scripts/
+2025-Jun-26 07:54:52.311985
 #16 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#17 [installer 5/7] COPY --from=pruner /app/scripts/ ./scripts/
-2025-Jun-26 07:40:22.998040
-#17 DONE 0.1s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#18 [installer 6/7] RUN pnpm install --frozen-lockfile
-2025-Jun-26 07:40:22.998040
-#18 5.144 Scope: all 2 workspace projects
-2025-Jun-26 07:40:22.998040
-#18 5.412 Lockfile is up to date, resolution step is skipped
-2025-Jun-26 07:40:22.998040
-#18 5.707 Progress: resolved 1, reused 0, downloaded 0, added 0
-2025-Jun-26 07:40:22.998040
-#18 6.153 Packages: +758
-2025-Jun-26 07:40:22.998040
-#18 6.153 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-2025-Jun-26 07:40:22.998040
-#18 6.710 Progress: resolved 758, reused 0, downloaded 0, added 0
-2025-Jun-26 07:40:22.998040
-#18 7.712 Progress: resolved 758, reused 0, downloaded 24, added 14
-2025-Jun-26 07:40:22.998040
-#18 8.715 Progress: resolved 758, reused 0, downloaded 78, added 77
-2025-Jun-26 07:40:22.998040
-#18 9.718 Progress: resolved 758, reused 0, downloaded 135, added 134
-2025-Jun-26 07:40:22.998040
-#18 10.72 Progress: resolved 758, reused 0, downloaded 177, added 173
-2025-Jun-26 07:40:22.998040
-#18 11.72 Progress: resolved 758, reused 0, downloaded 238, added 238
-2025-Jun-26 07:40:22.998040
-#18 12.80 Progress: resolved 758, reused 0, downloaded 311, added 309
-2025-Jun-26 07:40:22.998040
-#18 13.80 Progress: resolved 758, reused 0, downloaded 338, added 337
-2025-Jun-26 07:40:22.998040
-#18 14.81 Progress: resolved 758, reused 0, downloaded 377, added 374
-2025-Jun-26 07:40:22.998040
-#18 15.81 Progress: resolved 758, reused 0, downloaded 426, added 427
-2025-Jun-26 07:40:22.998040
-#18 16.81 Progress: resolved 758, reused 0, downloaded 431, added 427
-2025-Jun-26 07:40:22.998040
-#18 17.81 Progress: resolved 758, reused 0, downloaded 445, added 440
-2025-Jun-26 07:40:22.998040
-#18 18.81 Progress: resolved 758, reused 0, downloaded 466, added 465
-2025-Jun-26 07:40:22.998040
-#18 19.82 Progress: resolved 758, reused 0, downloaded 515, added 522
-2025-Jun-26 07:40:22.998040
-#18 20.82 Progress: resolved 758, reused 0, downloaded 576, added 582
-2025-Jun-26 07:40:22.998040
-#18 21.86 Progress: resolved 758, reused 0, downloaded 661, added 666
-2025-Jun-26 07:40:22.998040
-#18 22.86 Progress: resolved 758, reused 0, downloaded 744, added 750
-2025-Jun-26 07:40:22.998040
-#18 23.86 Progress: resolved 758, reused 0, downloaded 748, added 755
-2025-Jun-26 07:40:22.998040
-#18 25.20 Progress: resolved 758, reused 0, downloaded 749, added 755
-2025-Jun-26 07:40:22.998040
-#18 26.21 Progress: resolved 758, reused 0, downloaded 749, added 756
-2025-Jun-26 07:40:22.998040
-#18 27.49 Progress: resolved 758, reused 0, downloaded 750, added 756
-2025-Jun-26 07:40:22.998040
-#18 28.42 Progress: resolved 758, reused 0, downloaded 751, added 758, done
-2025-Jun-26 07:40:22.998040
-#18 29.08 .../core-js@3.43.0/node_modules/core-js postinstall$ node -e "try{require('./postinstall')}catch(e){}"
-2025-Jun-26 07:40:22.998040
-#18 29.08 .../node_modules/@tailwindcss/oxide postinstall$ node ./scripts/install.js
-2025-Jun-26 07:40:22.998040
-#18 29.20 .../sharp@0.34.2/node_modules/sharp install$ node install/check
-2025-Jun-26 07:40:22.998040
-#18 29.20 .../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
-2025-Jun-26 07:40:22.998040
-#18 29.20 .../node_modules/unrs-resolver postinstall$ napi-postinstall unrs-resolver 1.9.1 check
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: The project needs your help! Please consider supporting core-js:
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: > https://opencollective.com/core-js
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: > https://patreon.com/zloirock
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: > https://boosty.to/zloirock
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: > bitcoin: bc1qlea7544qtsmj2rayg0lthvza9fau63ux0fstcz
-2025-Jun-26 07:40:22.998040
-#18 29.39 .../core-js@3.43.0/node_modules/core-js postinstall: I highly recommend reading this: https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md
-2025-Jun-26 07:40:22.998040
-#18 29.40 .../esbuild@0.21.5/node_modules/esbuild postinstall: Done
-2025-Jun-26 07:40:22.998040
-#18 29.40 .../core-js@3.43.0/node_modules/core-js postinstall: Done
-2025-Jun-26 07:40:22.998040
-#18 29.45 .../node_modules/@tailwindcss/oxide postinstall: Done
-2025-Jun-26 07:40:22.998040
-#18 29.51 .../canvas@3.1.1/node_modules/canvas install$ prebuild-install -r napi || node-gyp rebuild
-2025-Jun-26 07:40:22.998040
-#18 29.58 .../node_modules/unrs-resolver postinstall: Done
-2025-Jun-26 07:40:22.998040
-#18 29.68 .../sharp@0.34.2/node_modules/sharp install: Done
-2025-Jun-26 07:40:22.998040
-#18 30.14 .../canvas@3.1.1/node_modules/canvas install: prebuild-install warn install No prebuilt binaries found (target=7 runtime=napi arch=x64 libc=musl platform=linux)
-2025-Jun-26 07:40:22.998040
-#18 30.24 .../canvas@3.1.1/node_modules/canvas install: gyp info it worked if it ends with ok
-2025-Jun-26 07:40:22.998040
-#18 30.24 .../canvas@3.1.1/node_modules/canvas install: gyp info using node-gyp@10.1.0
-2025-Jun-26 07:40:22.998040
-#18 30.24 .../canvas@3.1.1/node_modules/canvas install: gyp info using node@20.19.3 | linux | x64
-2025-Jun-26 07:40:22.998040
-#18 30.50 .../canvas@3.1.1/node_modules/canvas install: gyp info find Python using Python version 3.12.11 found at "/usr/bin/python3"
-2025-Jun-26 07:40:22.998040
-#18 30.90 .../canvas@3.1.1/node_modules/canvas install: gyp http GET https://unofficial-builds.nodejs.org/download/release/v20.19.3/node-v20.19.3-headers.tar.gz
-2025-Jun-26 07:40:22.998040
-#18 31.39 .../canvas@3.1.1/node_modules/canvas install: gyp http 200 https://unofficial-builds.nodejs.org/download/release/v20.19.3/node-v20.19.3-headers.tar.gz
-2025-Jun-26 07:40:22.998040
-#18 35.22 .../canvas@3.1.1/node_modules/canvas install: gyp http GET https://unofficial-builds.nodejs.org/download/release/v20.19.3/SHASUMS256.txt
-2025-Jun-26 07:40:22.998040
-#18 35.31 .../canvas@3.1.1/node_modules/canvas install: gyp http 200 https://unofficial-builds.nodejs.org/download/release/v20.19.3/SHASUMS256.txt
-2025-Jun-26 07:40:22.998040
-#18 35.32 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn /usr/bin/python3
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args [
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/gyp/gyp_main.py',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'binding.gyp',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-f',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'make',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas/build/config.gypi',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/addon.gypi',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.cache/node-gyp/20.19.3/include/node/common.gypi',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dlibrary=shared_library',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dvisibility=default',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/20.19.3',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_gyp_dir=/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/20.19.3/<(target_arch)/node.lib',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dmodule_root_dir=/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_engine=v8',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--depth=.',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--no-parallel',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--generator-output',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'build',
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Goutput_dir=.'
-2025-Jun-26 07:40:22.998040
-#18 35.33 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args ]
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! build error
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack Error: not found: make
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at getNotFoundError (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/node_modules/which/lib/index.js:16:17)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at which (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/node_modules/which/lib/index.js:77:9)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at async doWhich (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/lib/build.js:112:22)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at async loadConfigGypi (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/lib/build.js:77:7)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at async build (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/lib/build.js:35:3)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at async run (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js:81:18)
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! System Linux 6.8.0-60-generic
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! command "/usr/local/bin/node" "/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! cwd /app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! node -v v20.19.3
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! node-gyp -v v10.1.0
-2025-Jun-26 07:40:22.998040
-#18 36.26 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! not ok
-2025-Jun-26 07:40:22.998040
-#18 36.29 .../canvas@3.1.1/node_modules/canvas install: Failed
-2025-Jun-26 07:40:22.998040
-#18 36.66
-2025-Jun-26 07:40:22.998040
-#18 36.66 dependencies:
-2025-Jun-26 07:40:22.998040
-#18 36.66 + next 15.3.4
-2025-Jun-26 07:40:22.998040
-#18 36.66 + react 19.1.0
-2025-Jun-26 07:40:22.998040
-#18 36.66 + react-dom 19.1.0
-2025-Jun-26 07:40:22.998040
-#18 36.66
-2025-Jun-26 07:40:22.998040
-#18 36.66 devDependencies:
-2025-Jun-26 07:40:22.998040
-#18 36.66 + @eslint/eslintrc 3.3.1
-2025-Jun-26 07:40:22.998040
-#18 36.66 + @tailwindcss/postcss 4.1.10
-2025-Jun-26 07:40:22.998040
-#18 36.66 + @types/node 20.19.1
-2025-Jun-26 07:40:22.998040
-#18 36.66 + @types/react 19.1.8
-2025-Jun-26 07:40:22.998040
-#18 36.66 + @types/react-dom 19.1.6
-2025-Jun-26 07:40:22.998040
-#18 36.66 + eslint 9.29.0
-2025-Jun-26 07:40:22.998040
-#18 36.66 + eslint-config-next 15.3.4
-2025-Jun-26 07:40:22.998040
-#18 36.66 + tailwindcss 4.1.10
-2025-Jun-26 07:40:22.998040
-#18 36.66 + typescript 5.8.3
-2025-Jun-26 07:40:22.998040
-#18 36.66
-2025-Jun-26 07:40:22.998040
-#18 36.74 Done in 32.6s
-2025-Jun-26 07:40:22.998040
-#18 DONE 37.6s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
-#19 [installer 7/7] RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
-2025-Jun-26 07:40:22.998040
-#19 1.765 Collecting requests>=2.31.0 (from -r scripts/requirements.txt (line 5))
-2025-Jun-26 07:40:22.998040
-#19 1.847   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.111 Collecting pandas>=2.0.0 (from -r scripts/requirements.txt (line 6))
-2025-Jun-26 07:40:22.998040
-#19 2.131   Downloading pandas-2.3.0-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (91 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.315 Collecting supabase>=1.3.0 (from -r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 2.333   Downloading supabase-2.16.0-py3-none-any.whl.metadata (10 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.366 Collecting schedule>=1.2.0 (from -r scripts/requirements.txt (line 8))
-2025-Jun-26 07:40:22.998040
-#19 2.383   Downloading schedule-1.2.2-py3-none-any.whl.metadata (3.8 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.779 Collecting numpy>=1.24.0 (from -r scripts/requirements.txt (line 11))
-2025-Jun-26 07:40:22.998040
-#19 2.799   Downloading numpy-2.3.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (62 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.867 Collecting python-dateutil>=2.8.2 (from -r scripts/requirements.txt (line 12))
-2025-Jun-26 07:40:22.998040
-#19 2.883   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
-2025-Jun-26 07:40:22.998040
-#19 2.943 Collecting urllib3>=2.0.0 (from -r scripts/requirements.txt (line 15))
-2025-Jun-26 07:40:22.998040
-#19 2.959   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.012 Collecting certifi>=2023.0.0 (from -r scripts/requirements.txt (line 16))
-2025-Jun-26 07:40:22.998040
-#19 3.028   Downloading certifi-2025.6.15-py3-none-any.whl.metadata (2.4 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.057 Collecting python-json-logger>=2.0.7 (from -r scripts/requirements.txt (line 19))
-2025-Jun-26 07:40:22.998040
-#19 3.074   Downloading python_json_logger-3.3.0-py3-none-any.whl.metadata (4.0 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.116 Collecting python-dotenv>=1.0.0 (from -r scripts/requirements.txt (line 22))
-2025-Jun-26 07:40:22.998040
-#19 3.132   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.215 Collecting pytest>=7.4.0 (from -r scripts/requirements.txt (line 25))
-2025-Jun-26 07:40:22.998040
-#19 3.231   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.273 Collecting pytest-cov>=4.1.0 (from -r scripts/requirements.txt (line 26))
-2025-Jun-26 07:40:22.998040
-#19 3.293   Downloading pytest_cov-6.2.1-py3-none-any.whl.metadata (30 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.341 Collecting requests-mock>=1.11.0 (from -r scripts/requirements.txt (line 27))
-2025-Jun-26 07:40:22.998040
-#19 3.359   Downloading requests_mock-1.12.1-py2.py3-none-any.whl.metadata (4.1 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.390 Collecting eurostat>=1.0.0 (from -r scripts/requirements.txt (line 30))
-2025-Jun-26 07:40:22.998040
-#19 3.408   Downloading eurostat-1.1.1-py3-none-any.whl.metadata (26 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.461 Collecting openpyxl>=3.1.0 (from -r scripts/requirements.txt (line 33))
-2025-Jun-26 07:40:22.998040
-#19 3.480   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.563 Collecting xlsxwriter>=3.1.0 (from -r scripts/requirements.txt (line 34))
-2025-Jun-26 07:40:22.998040
-#19 3.581   Downloading xlsxwriter-3.2.5-py3-none-any.whl.metadata (2.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.613 Collecting memory-profiler>=0.61.0 (from -r scripts/requirements.txt (line 37))
-2025-Jun-26 07:40:22.998040
-#19 3.631   Downloading memory_profiler-0.61.0-py3-none-any.whl.metadata (20 kB)
-2025-Jun-26 07:40:22.998040
-#19 3.784 Collecting psutil>=5.9.0 (from -r scripts/requirements.txt (line 38))
-2025-Jun-26 07:40:22.998040
-#19 3.807   Downloading psutil-7.0.0.tar.gz (497 kB)
-2025-Jun-26 07:40:22.998040
-#19 4.045   Installing build dependencies: started
-2025-Jun-26 07:40:22.998040
-#19 6.039   Installing build dependencies: finished with status 'done'
-2025-Jun-26 07:40:22.998040
-#19 6.041   Getting requirements to build wheel: started
-2025-Jun-26 07:40:22.998040
-#19 7.545   Getting requirements to build wheel: finished with status 'done'
-2025-Jun-26 07:40:22.998040
-#19 7.550   Preparing metadata (pyproject.toml): started
-2025-Jun-26 07:40:22.998040
-#19 8.288   Preparing metadata (pyproject.toml): finished with status 'done'
-2025-Jun-26 07:40:22.998040
-#19 8.481 Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r scripts/requirements.txt (line 5))
-2025-Jun-26 07:40:22.998040
-#19 8.498   Downloading charset_normalizer-3.4.2-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (35 kB)
-2025-Jun-26 07:40:22.998040
-#19 8.544 Collecting idna<4,>=2.5 (from requests>=2.31.0->-r scripts/requirements.txt (line 5))
-2025-Jun-26 07:40:22.998040
-#19 8.560   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
-2025-Jun-26 07:40:22.998040
-#19 8.703 Collecting pytz>=2020.1 (from pandas>=2.0.0->-r scripts/requirements.txt (line 6))
-2025-Jun-26 07:40:22.998040
-#19 8.719   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
-2025-Jun-26 07:40:22.998040
-#19 8.758 Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r scripts/requirements.txt (line 6))
-2025-Jun-26 07:40:22.998040
-#19 8.775   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
-2025-Jun-26 07:40:22.998040
-#19 8.826 Collecting gotrue<3.0.0,>=2.11.0 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 8.846   Downloading gotrue-2.12.2-py3-none-any.whl.metadata (6.5 kB)
-2025-Jun-26 07:40:22.998040
-#19 8.968 Collecting httpx<0.29,>=0.26 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 8.984   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.027 Collecting postgrest<1.2,>0.19 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.044   Downloading postgrest-1.1.1-py3-none-any.whl.metadata (3.5 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.080 Collecting realtime<2.6.0,>=2.4.0 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.096   Downloading realtime-2.5.2-py3-none-any.whl.metadata (6.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.135 Collecting storage3<0.13,>=0.10 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.154   Downloading storage3-0.12.0-py3-none-any.whl.metadata (1.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.190 Collecting supafunc<0.11,>=0.9 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.207   Downloading supafunc-0.10.1-py3-none-any.whl.metadata (1.2 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.620 Collecting pydantic<3,>=1.10 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.637   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.717 Collecting pyjwt<3.0.0,>=2.10.1 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.738   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.820 Collecting pytest-mock<4.0.0,>=3.14.0 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.836   Downloading pytest_mock-3.14.1-py3-none-any.whl.metadata (3.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.882 Collecting anyio (from httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.897   Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 9.978 Collecting httpcore==1.* (from httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 9.997   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.03 Collecting h11>=0.16 (from httpcore==1.*->httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.05   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.10 Collecting h2<5,>=3 (from httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.12   Downloading h2-4.2.0-py3-none-any.whl.metadata (5.1 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.17 Collecting hyperframe<7,>=6.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.19   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.22 Collecting hpack<5,>=4.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.26   Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.29 Collecting deprecation<3.0.0,>=2.1.0 (from postgrest<1.2,>0.19->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.31   Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
-2025-Jun-26 07:40:22.998040
-#19 10.37 Requirement already satisfied: packaging in /usr/lib/python3.12/site-packages (from deprecation<3.0.0,>=2.1.0->postgrest<1.2,>0.19->supabase>=1.3.0->-r scripts/requirements.txt (line 7)) (25.0)
-2025-Jun-26 07:40:22.998040
-#19 10.40 Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 10.41   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
-2025-Jun-26 07:40:22.998040
-#19 12.09 Collecting pydantic-core==2.33.2 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 12.10   Downloading pydantic_core-2.33.2-cp312-cp312-musllinux_1_1_x86_64.whl.metadata (6.8 kB)
-2025-Jun-26 07:40:22.998040
-#19 12.15 Collecting typing-extensions>=4.12.2 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 12.17   Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
-2025-Jun-26 07:40:22.998040
-#19 12.20 Collecting typing-inspection>=0.4.0 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 12.21   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.45 Collecting aiohttp<4.0.0,>=3.12.13 (from realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 13.47   Downloading aiohttp-3.12.13-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (7.6 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.69 Collecting websockets<16,>=11 (from realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 13.70   Downloading websockets-15.0.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (6.8 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.74 Collecting six>=1.5 (from python-dateutil>=2.8.2->-r scripts/requirements.txt (line 12))
-2025-Jun-26 07:40:22.998040
-#19 13.76   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.80 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 13.82   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.88 Collecting aiosignal>=1.1.2 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 13.90   Downloading aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
-2025-Jun-26 07:40:22.998040
-#19 13.94 Collecting attrs>=17.3.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 13.96   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
-2025-Jun-26 07:40:22.998040
-#19 14.33 Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 14.35   Downloading frozenlist-1.7.0-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (18 kB)
-2025-Jun-26 07:40:22.998040
-#19 14.85 Collecting multidict<7.0,>=4.5 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 14.87   Downloading multidict-6.5.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (5.3 kB)
-2025-Jun-26 07:40:22.998040
-#19 14.98 Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 14.99   Downloading propcache-0.3.2-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (12 kB)
-2025-Jun-26 07:40:22.998040
-#19 15.62 Collecting yarl<2.0,>=1.17.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 15.64   Downloading yarl-1.20.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (73 kB)
-2025-Jun-26 07:40:22.998040
-#19 15.70 Collecting strenum<0.5.0,>=0.4.15 (from supafunc<0.11,>=0.9->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 15.72   Downloading StrEnum-0.4.15-py3-none-any.whl.metadata (5.3 kB)
-2025-Jun-26 07:40:22.998040
-#19 15.81 Collecting iniconfig>=1 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
-2025-Jun-26 07:40:22.998040
-#19 15.82   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 15.85 Collecting pluggy<2,>=1.5 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
-2025-Jun-26 07:40:22.998040
-#19 15.87   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-2025-Jun-26 07:40:22.998040
-#19 15.92 Collecting pygments>=2.7.2 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
-2025-Jun-26 07:40:22.998040
-#19 15.94   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
-2025-Jun-26 07:40:22.998040
-#19 16.78 Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov>=4.1.0->-r scripts/requirements.txt (line 26))
-2025-Jun-26 07:40:22.998040
-#19 16.80   Downloading coverage-7.9.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (8.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 16.88 Collecting et-xmlfile (from openpyxl>=3.1.0->-r scripts/requirements.txt (line 33))
-2025-Jun-26 07:40:22.998040
-#19 16.90   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.04 Collecting sniffio>=1.1 (from anyio->httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
-2025-Jun-26 07:40:22.998040
-#19 17.06   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.11 Downloading requests-2.32.4-py3-none-any.whl (64 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.13 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.17 Downloading charset_normalizer-3.4.2-cp312-cp312-musllinux_1_2_x86_64.whl (149 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.22 Downloading idna-3.10-py3-none-any.whl (70 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.24 Downloading pandas-2.3.0-cp312-cp312-musllinux_1_2_x86_64.whl (13.2 MB)
-2025-Jun-26 07:40:22.998040
-#19 17.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.2/13.2 MB 21.2 MB/s eta 0:00:00
-2025-Jun-26 07:40:22.998040
-#19 17.91 Downloading supabase-2.16.0-py3-none-any.whl (17 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.94 Downloading gotrue-2.12.2-py3-none-any.whl (43 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.96 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
-2025-Jun-26 07:40:22.998040
-#19 17.98 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.00 Downloading h2-4.2.0-py3-none-any.whl (60 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.01 Downloading hpack-4.1.0-py3-none-any.whl (34 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.05 Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.07 Downloading postgrest-1.1.1-py3-none-any.whl (22 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.09 Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.11 Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.16 Downloading pydantic_core-2.33.2-cp312-cp312-musllinux_1_1_x86_64.whl (2.2 MB)
-2025-Jun-26 07:40:22.998040
-#19 18.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 25.4 MB/s eta 0:00:00
-2025-Jun-26 07:40:22.998040
-#19 18.28 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.30 Downloading pytest_mock-3.14.1-py3-none-any.whl (9.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.33 Downloading realtime-2.5.2-py3-none-any.whl (21 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.47 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.56 Downloading aiohttp-3.12.13-cp312-cp312-musllinux_1_2_x86_64.whl (1.7 MB)
-2025-Jun-26 07:40:22.998040
-#19 18.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 12.0 MB/s eta 0:00:00
-2025-Jun-26 07:40:22.998040
-#19 18.84 Downloading multidict-6.5.1-cp312-cp312-musllinux_1_2_x86_64.whl (246 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.88 Downloading storage3-0.12.0-py3-none-any.whl (18 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.92 Downloading supafunc-0.10.1-py3-none-any.whl (8.0 kB)
-2025-Jun-26 07:40:22.998040
-#19 18.93 Downloading StrEnum-0.4.15-py3-none-any.whl (8.9 kB)
-2025-Jun-26 07:40:22.998040
-#19 19.04 Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
-2025-Jun-26 07:40:22.998040
-#19 19.14 Downloading websockets-15.0.1-cp312-cp312-musllinux_1_2_x86_64.whl (182 kB)
-2025-Jun-26 07:40:22.998040
-#19 19.20 Downloading yarl-1.20.1-cp312-cp312-musllinux_1_2_x86_64.whl (374 kB)
-2025-Jun-26 07:40:22.998040
-#19 19.27 Downloading schedule-1.2.2-py3-none-any.whl (12 kB)
-2025-Jun-26 07:40:22.998040
-#19 19.30 Downloading numpy-2.3.1-cp312-cp312-musllinux_1_2_x86_64.whl (18.4 MB)
-2025-Jun-26 07:40:22.998040
-#19 20.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.4/18.4 MB 24.6 MB/s eta 0:00:00
-2025-Jun-26 07:40:22.998040
-#19 20.09 Downloading certifi-2025.6.15-py3-none-any.whl (157 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.11 Downloading python_json_logger-3.3.0-py3-none-any.whl (15 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.13 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.15 Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.17 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.19 Downloading pytest_cov-6.2.1-py3-none-any.whl (24 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.21 Downloading requests_mock-1.12.1-py2.py3-none-any.whl (27 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.23 Downloading eurostat-1.1.1-py3-none-any.whl (16 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.25 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.28 Downloading xlsxwriter-3.2.5-py3-none-any.whl (172 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.31 Downloading memory_profiler-0.61.0-py3-none-any.whl (31 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.32 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.34 Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.36 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.38 Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.40 Downloading coverage-7.9.1-cp312-cp312-musllinux_1_2_x86_64.whl (244 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.43 Downloading frozenlist-1.7.0-cp312-cp312-musllinux_1_2_x86_64.whl (237 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.46 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.47 Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.49 Downloading propcache-0.3.2-cp312-cp312-musllinux_1_2_x86_64.whl (222 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.51 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
-2025-Jun-26 07:40:22.998040
-#19 20.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.6 MB/s eta 0:00:00
-2025-Jun-26 07:40:22.998040
-#19 20.58 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.73 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.76 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.77 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.81 Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.83 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
-2025-Jun-26 07:40:22.998040
-#19 20.87 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
-2025-Jun-26 07:40:22.998040
-#19 21.23 Building wheels for collected packages: psutil
-2025-Jun-26 07:40:22.998040
-#19 21.23   Building wheel for psutil (pyproject.toml): started
-2025-Jun-26 07:40:22.998040
-#19 25.89   Building wheel for psutil (pyproject.toml): finished with status 'done'
-2025-Jun-26 07:40:22.998040
-#19 25.89   Created wheel for psutil: filename=psutil-7.0.0-cp36-abi3-linux_x86_64.whl size=273924 sha256=c708794e9d3d3f69adb4c228da926186224ba671c3305dd963683df239175ae3
-2025-Jun-26 07:40:22.998040
-#19 25.89   Stored in directory: /tmp/pip-ephem-wheel-cache-bexs1j5f/wheels/0c/58/48/ccefe23b905f1dd76f8444f328ff2cfb1d4920a081f9d5d03d
-2025-Jun-26 07:40:22.998040
-#19 25.90 Successfully built psutil
-2025-Jun-26 07:40:22.998040
-#19 26.31 Installing collected packages: strenum, pytz, xlsxwriter, websockets, urllib3, tzdata, typing-extensions, sniffio, six, schedule, python-json-logger, python-dotenv, pyjwt, pygments, psutil, propcache, pluggy, numpy, multidict, iniconfig, idna, hyperframe, hpack, h11, frozenlist, et-xmlfile, deprecation, coverage, charset_normalizer, certifi, attrs, annotated-types, aiohappyeyeballs, yarl, typing-inspection, requests, python-dateutil, pytest, pydantic-core, openpyxl, memory-profiler, httpcore, h2, anyio, aiosignal, requests-mock, pytest-mock, pytest-cov, pydantic, pandas, httpx, aiohttp, realtime, eurostat, supafunc, storage3, postgrest, gotrue, supabase
-2025-Jun-26 07:40:22.998040
-#19 60.41
-2025-Jun-26 07:40:22.998040
-#19 60.43 Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.12.13 aiosignal-1.3.2 annotated-types-0.7.0 anyio-4.9.0 attrs-25.3.0 certifi-2025.6.15 charset_normalizer-3.4.2 coverage-7.9.1 deprecation-2.1.0 et-xmlfile-2.0.0 eurostat-1.1.1 frozenlist-1.7.0 gotrue-2.12.2 h11-0.16.0 h2-4.2.0 hpack-4.1.0 httpcore-1.0.9 httpx-0.28.1 hyperframe-6.1.0 idna-3.10 iniconfig-2.1.0 memory-profiler-0.61.0 multidict-6.5.1 numpy-2.3.1 openpyxl-3.1.5 pandas-2.3.0 pluggy-1.6.0 postgrest-1.1.1 propcache-0.3.2 psutil-7.0.0 pydantic-2.11.7 pydantic-core-2.33.2 pygments-2.19.2 pyjwt-2.10.1 pytest-8.4.1 pytest-cov-6.2.1 pytest-mock-3.14.1 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 python-json-logger-3.3.0 pytz-2025.2 realtime-2.5.2 requests-2.32.4 requests-mock-1.12.1 schedule-1.2.2 six-1.17.0 sniffio-1.3.1 storage3-0.12.0 strenum-0.4.15 supabase-2.16.0 supafunc-0.10.1 typing-extensions-4.14.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 websockets-15.0.1 xlsxwriter-3.2.5 yarl-1.20.1
-2025-Jun-26 07:40:22.998040
-#19 60.43 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-2025-Jun-26 07:40:22.998040
-#19 DONE 62.5s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#17 [installer 6/7] RUN pnpm install --frozen-lockfile
+2025-Jun-26 07:54:52.311985
+#17 4.887 Scope: all 2 workspace projects
+2025-Jun-26 07:54:52.311985
+#17 5.039 Lockfile is up to date, resolution step is skipped
+2025-Jun-26 07:54:52.311985
+#17 5.264 Progress: resolved 1, reused 0, downloaded 0, added 0
+2025-Jun-26 07:54:52.311985
+#17 5.581 Packages: +758
+2025-Jun-26 07:54:52.311985
+#17 5.581 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2025-Jun-26 07:54:52.311985
+#17 6.266 Progress: resolved 758, reused 0, downloaded 0, added 0
+2025-Jun-26 07:54:52.311985
+#17 7.267 Progress: resolved 758, reused 0, downloaded 17, added 10
+2025-Jun-26 07:54:52.311985
+#17 8.267 Progress: resolved 758, reused 0, downloaded 74, added 74
+2025-Jun-26 07:54:52.311985
+#17 9.282 Progress: resolved 758, reused 0, downloaded 115, added 111
+2025-Jun-26 07:54:52.311985
+#17 10.28 Progress: resolved 758, reused 0, downloaded 161, added 161
+2025-Jun-26 07:54:52.311985
+#17 11.32 Progress: resolved 758, reused 0, downloaded 178, added 176
+2025-Jun-26 07:54:52.311985
+#17 12.32 Progress: resolved 758, reused 0, downloaded 209, added 201
+2025-Jun-26 07:54:52.311985
+#17 13.38 Progress: resolved 758, reused 0, downloaded 228, added 220
+2025-Jun-26 07:54:52.311985
+#17 14.38 Progress: resolved 758, reused 0, downloaded 270, added 262
+2025-Jun-26 07:54:52.311985
+#17 15.38 Progress: resolved 758, reused 0, downloaded 324, added 318
+2025-Jun-26 07:54:52.311985
+#17 16.40 Progress: resolved 758, reused 0, downloaded 415, added 422
+2025-Jun-26 07:54:52.311985
+#17 17.41 Progress: resolved 758, reused 0, downloaded 431, added 429
+2025-Jun-26 07:54:52.311985
+#17 18.42 Progress: resolved 758, reused 0, downloaded 436, added 434
+2025-Jun-26 07:54:52.311985
+#17 19.42 Progress: resolved 758, reused 0, downloaded 448, added 442
+2025-Jun-26 07:54:52.311985
+#17 20.42 Progress: resolved 758, reused 0, downloaded 451, added 444
+2025-Jun-26 07:54:52.311985
+#17 21.42 Progress: resolved 758, reused 0, downloaded 469, added 468
+2025-Jun-26 07:54:52.311985
+#17 22.43 Progress: resolved 758, reused 0, downloaded 511, added 517
+2025-Jun-26 07:54:52.311985
+#17 23.43 Progress: resolved 758, reused 0, downloaded 536, added 531
+2025-Jun-26 07:54:52.311985
+#17 24.51 Progress: resolved 758, reused 0, downloaded 558, added 559
+2025-Jun-26 07:54:52.311985
+#17 25.53 Progress: resolved 758, reused 0, downloaded 570, added 565
+2025-Jun-26 07:54:52.311985
+#17 26.54 Progress: resolved 758, reused 0, downloaded 607, added 606
+2025-Jun-26 07:54:52.311985
+#17 27.55 Progress: resolved 758, reused 0, downloaded 632, added 626
+2025-Jun-26 07:54:52.311985
+#17 28.55 Progress: resolved 758, reused 0, downloaded 685, added 681
+2025-Jun-26 07:54:52.311985
+#17 29.55 Progress: resolved 758, reused 0, downloaded 739, added 732
+2025-Jun-26 07:54:52.311985
+#17 30.11 Progress: resolved 758, reused 0, downloaded 751, added 758, done
+2025-Jun-26 07:54:52.311985
+#17 30.93 .../node_modules/@tailwindcss/oxide postinstall$ node ./scripts/install.js
+2025-Jun-26 07:54:52.311985
+#17 30.94 .../core-js@3.43.0/node_modules/core-js postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+2025-Jun-26 07:54:52.311985
+#17 31.03 .../sharp@0.34.2/node_modules/sharp install$ node install/check
+2025-Jun-26 07:54:52.311985
+#17 31.03 .../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
+2025-Jun-26 07:54:52.311985
+#17 31.03 .../node_modules/unrs-resolver postinstall$ napi-postinstall unrs-resolver 1.9.1 check
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: The project needs your help! Please consider supporting core-js:
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: > https://opencollective.com/core-js
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: > https://patreon.com/zloirock
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: > https://boosty.to/zloirock
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: > bitcoin: bc1qlea7544qtsmj2rayg0lthvza9fau63ux0fstcz
+2025-Jun-26 07:54:52.311985
+#17 31.19 .../core-js@3.43.0/node_modules/core-js postinstall: I highly recommend reading this: https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md
+2025-Jun-26 07:54:52.311985
+#17 31.20 .../core-js@3.43.0/node_modules/core-js postinstall: Done
+2025-Jun-26 07:54:52.311985
+#17 31.22 .../node_modules/unrs-resolver postinstall: Done
+2025-Jun-26 07:54:52.311985
+#17 31.24 .../esbuild@0.21.5/node_modules/esbuild postinstall: Done
+2025-Jun-26 07:54:52.311985
+#17 31.29 .../canvas@3.1.1/node_modules/canvas install$ prebuild-install -r napi || node-gyp rebuild
+2025-Jun-26 07:54:52.311985
+#17 31.45 .../node_modules/@tailwindcss/oxide postinstall: Done
+2025-Jun-26 07:54:52.311985
+#17 31.73 .../sharp@0.34.2/node_modules/sharp install: Done
+2025-Jun-26 07:54:52.311985
+#17 32.11 .../canvas@3.1.1/node_modules/canvas install: prebuild-install warn install No prebuilt binaries found (target=7 runtime=napi arch=x64 libc=musl platform=linux)
+2025-Jun-26 07:54:52.311985
+#17 32.24 .../canvas@3.1.1/node_modules/canvas install: gyp info it worked if it ends with ok
+2025-Jun-26 07:54:52.311985
+#17 32.24 .../canvas@3.1.1/node_modules/canvas install: gyp info using node-gyp@10.1.0
+2025-Jun-26 07:54:52.311985
+#17 32.24 .../canvas@3.1.1/node_modules/canvas install: gyp info using node@20.19.3 | linux | x64
+2025-Jun-26 07:54:52.311985
+#17 32.55 .../canvas@3.1.1/node_modules/canvas install: gyp info find Python using Python version 3.12.11 found at "/usr/bin/python3"
+2025-Jun-26 07:54:52.311985
+#17 33.11 .../canvas@3.1.1/node_modules/canvas install: gyp http GET https://unofficial-builds.nodejs.org/download/release/v20.19.3/node-v20.19.3-headers.tar.gz
+2025-Jun-26 07:54:52.311985
+#17 33.61 .../canvas@3.1.1/node_modules/canvas install: gyp http 200 https://unofficial-builds.nodejs.org/download/release/v20.19.3/node-v20.19.3-headers.tar.gz
+2025-Jun-26 07:54:52.311985
+#17 38.01 .../canvas@3.1.1/node_modules/canvas install: gyp http GET https://unofficial-builds.nodejs.org/download/release/v20.19.3/SHASUMS256.txt
+2025-Jun-26 07:54:52.311985
+#17 38.10 .../canvas@3.1.1/node_modules/canvas install: gyp http 200 https://unofficial-builds.nodejs.org/download/release/v20.19.3/SHASUMS256.txt
+2025-Jun-26 07:54:52.311985
+#17 38.12 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn /usr/bin/python3
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args [
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/gyp/gyp_main.py',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'binding.gyp',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-f',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'make',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas/build/config.gypi',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/addon.gypi',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-I',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '/root/.cache/node-gyp/20.19.3/include/node/common.gypi',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dlibrary=shared_library',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dvisibility=default',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/20.19.3',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_gyp_dir=/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/20.19.3/<(target_arch)/node.lib',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dmodule_root_dir=/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Dnode_engine=v8',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--depth=.',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--no-parallel',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '--generator-output',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args 'build',
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args '-Goutput_dir=.'
+2025-Jun-26 07:54:52.311985
+#17 38.13 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args ]
+2025-Jun-26 07:54:52.311985
+#17 39.18 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn make
+2025-Jun-26 07:54:52.311985
+#17 39.18 .../canvas@3.1.1/node_modules/canvas install: gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+2025-Jun-26 07:54:52.311985
+#17 39.19 .../canvas@3.1.1/node_modules/canvas install: make: Entering directory '/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas/build'
+2025-Jun-26 07:54:52.311985
+#17 39.19 .../canvas@3.1.1/node_modules/canvas install:   SOLINK_MODULE(target) Release/obj.target/canvas-postbuild.node
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: make: c++: No such file or directory
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: make: *** [canvas-postbuild.target.mk:22: Release/obj.target/canvas-postbuild.node] Error 127
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: make: Leaving directory '/app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas/build'
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! build error
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack Error: `make` failed with exit code: 2
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! stack at ChildProcess.<anonymous> (/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/lib/build.js:209:23)
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! System Linux 6.8.0-60-generic
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! command "/usr/local/bin/node" "/root/.local/share/pnpm/.tools/pnpm/9.1.1/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+2025-Jun-26 07:54:52.311985
+#17 39.20 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! cwd /app/node_modules/.pnpm/canvas@3.1.1/node_modules/canvas
+2025-Jun-26 07:54:52.311985
+#17 39.21 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! node -v v20.19.3
+2025-Jun-26 07:54:52.311985
+#17 39.21 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! node-gyp -v v10.1.0
+2025-Jun-26 07:54:52.311985
+#17 39.21 .../canvas@3.1.1/node_modules/canvas install: gyp ERR! not ok
+2025-Jun-26 07:54:52.311985
+#17 39.23 .../canvas@3.1.1/node_modules/canvas install: Failed
+2025-Jun-26 07:54:52.311985
+#17 39.61
+2025-Jun-26 07:54:52.311985
+#17 39.61 dependencies:
+2025-Jun-26 07:54:52.311985
+#17 39.61 + next 15.3.4
+2025-Jun-26 07:54:52.311985
+#17 39.61 + react 19.1.0
+2025-Jun-26 07:54:52.311985
+#17 39.61 + react-dom 19.1.0
+2025-Jun-26 07:54:52.311985
+#17 39.61
+2025-Jun-26 07:54:52.311985
+#17 39.61 devDependencies:
+2025-Jun-26 07:54:52.311985
+#17 39.61 + @eslint/eslintrc 3.3.1
+2025-Jun-26 07:54:52.311985
+#17 39.61 + @tailwindcss/postcss 4.1.10
+2025-Jun-26 07:54:52.311985
+#17 39.61 + @types/node 20.19.1
+2025-Jun-26 07:54:52.311985
+#17 39.61 + @types/react 19.1.8
+2025-Jun-26 07:54:52.311985
+#17 39.61 + @types/react-dom 19.1.6
+2025-Jun-26 07:54:52.311985
+#17 39.61 + eslint 9.29.0
+2025-Jun-26 07:54:52.311985
+#17 39.61 + eslint-config-next 15.3.4
+2025-Jun-26 07:54:52.311985
+#17 39.61 + tailwindcss 4.1.10
+2025-Jun-26 07:54:52.311985
+#17 39.61 + typescript 5.8.3
+2025-Jun-26 07:54:52.311985
+#17 39.61
+2025-Jun-26 07:54:52.311985
+#17 39.70 Done in 35.7s
+2025-Jun-26 07:54:52.311985
+#17 DONE 40.3s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#18 [installer 7/7] RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
+2025-Jun-26 07:54:52.311985
+#18 1.972 Collecting requests>=2.31.0 (from -r scripts/requirements.txt (line 5))
+2025-Jun-26 07:54:52.311985
+#18 2.048   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 2.331 Collecting pandas>=2.0.0 (from -r scripts/requirements.txt (line 6))
+2025-Jun-26 07:54:52.311985
+#18 2.350   Downloading pandas-2.3.0-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (91 kB)
+2025-Jun-26 07:54:52.311985
+#18 2.575 Collecting supabase>=1.3.0 (from -r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 2.594   Downloading supabase-2.16.0-py3-none-any.whl.metadata (10 kB)
+2025-Jun-26 07:54:52.311985
+#18 2.635 Collecting schedule>=1.2.0 (from -r scripts/requirements.txt (line 8))
+2025-Jun-26 07:54:52.311985
+#18 2.653   Downloading schedule-1.2.2-py3-none-any.whl.metadata (3.8 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.079 Collecting numpy>=1.24.0 (from -r scripts/requirements.txt (line 11))
+2025-Jun-26 07:54:52.311985
+#18 3.096   Downloading numpy-2.3.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (62 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.158 Collecting python-dateutil>=2.8.2 (from -r scripts/requirements.txt (line 12))
+2025-Jun-26 07:54:52.311985
+#18 3.174   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.233 Collecting urllib3>=2.0.0 (from -r scripts/requirements.txt (line 15))
+2025-Jun-26 07:54:52.311985
+#18 3.249   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.301 Collecting certifi>=2023.0.0 (from -r scripts/requirements.txt (line 16))
+2025-Jun-26 07:54:52.311985
+#18 3.318   Downloading certifi-2025.6.15-py3-none-any.whl.metadata (2.4 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.350 Collecting python-json-logger>=2.0.7 (from -r scripts/requirements.txt (line 19))
+2025-Jun-26 07:54:52.311985
+#18 3.367   Downloading python_json_logger-3.3.0-py3-none-any.whl.metadata (4.0 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.415 Collecting python-dotenv>=1.0.0 (from -r scripts/requirements.txt (line 22))
+2025-Jun-26 07:54:52.311985
+#18 3.432   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.517 Collecting pytest>=7.4.0 (from -r scripts/requirements.txt (line 25))
+2025-Jun-26 07:54:52.311985
+#18 3.533   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.577 Collecting pytest-cov>=4.1.0 (from -r scripts/requirements.txt (line 26))
+2025-Jun-26 07:54:52.311985
+#18 3.594   Downloading pytest_cov-6.2.1-py3-none-any.whl.metadata (30 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.640 Collecting requests-mock>=1.11.0 (from -r scripts/requirements.txt (line 27))
+2025-Jun-26 07:54:52.311985
+#18 3.659   Downloading requests_mock-1.12.1-py2.py3-none-any.whl.metadata (4.1 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.690 Collecting eurostat>=1.0.0 (from -r scripts/requirements.txt (line 30))
+2025-Jun-26 07:54:52.311985
+#18 3.709   Downloading eurostat-1.1.1-py3-none-any.whl.metadata (26 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.756 Collecting openpyxl>=3.1.0 (from -r scripts/requirements.txt (line 33))
+2025-Jun-26 07:54:52.311985
+#18 3.772   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.853 Collecting xlsxwriter>=3.1.0 (from -r scripts/requirements.txt (line 34))
+2025-Jun-26 07:54:52.311985
+#18 3.870   Downloading xlsxwriter-3.2.5-py3-none-any.whl.metadata (2.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 3.902 Collecting memory-profiler>=0.61.0 (from -r scripts/requirements.txt (line 37))
+2025-Jun-26 07:54:52.311985
+#18 3.921   Downloading memory_profiler-0.61.0-py3-none-any.whl.metadata (20 kB)
+2025-Jun-26 07:54:52.311985
+#18 4.091 Collecting psutil>=5.9.0 (from -r scripts/requirements.txt (line 38))
+2025-Jun-26 07:54:52.311985
+#18 4.107   Downloading psutil-7.0.0.tar.gz (497 kB)
+2025-Jun-26 07:54:52.311985
+#18 4.321   Installing build dependencies: started
+2025-Jun-26 07:54:52.311985
+#18 6.325   Installing build dependencies: finished with status 'done'
+2025-Jun-26 07:54:52.311985
+#18 6.346   Getting requirements to build wheel: started
+2025-Jun-26 07:54:52.311985
+#18 7.876   Getting requirements to build wheel: finished with status 'done'
+2025-Jun-26 07:54:52.311985
+#18 7.880   Preparing metadata (pyproject.toml): started
+2025-Jun-26 07:54:52.311985
+#18 8.617   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-Jun-26 07:54:52.311985
+#18 8.805 Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r scripts/requirements.txt (line 5))
+2025-Jun-26 07:54:52.311985
+#18 8.822   Downloading charset_normalizer-3.4.2-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (35 kB)
+2025-Jun-26 07:54:52.311985
+#18 8.867 Collecting idna<4,>=2.5 (from requests>=2.31.0->-r scripts/requirements.txt (line 5))
+2025-Jun-26 07:54:52.311985
+#18 8.884   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.040 Collecting pytz>=2020.1 (from pandas>=2.0.0->-r scripts/requirements.txt (line 6))
+2025-Jun-26 07:54:52.311985
+#18 9.059   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.098 Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r scripts/requirements.txt (line 6))
+2025-Jun-26 07:54:52.311985
+#18 9.115   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.169 Collecting gotrue<3.0.0,>=2.11.0 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.185   Downloading gotrue-2.12.2-py3-none-any.whl.metadata (6.5 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.234 Collecting httpx<0.29,>=0.26 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.250   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.294 Collecting postgrest<1.2,>0.19 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.313   Downloading postgrest-1.1.1-py3-none-any.whl.metadata (3.5 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.346 Collecting realtime<2.6.0,>=2.4.0 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.364   Downloading realtime-2.5.2-py3-none-any.whl.metadata (6.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.403 Collecting storage3<0.13,>=0.10 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.420   Downloading storage3-0.12.0-py3-none-any.whl.metadata (1.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.459 Collecting supafunc<0.11,>=0.9 (from supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.477   Downloading supafunc-0.10.1-py3-none-any.whl.metadata (1.2 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.850 Collecting pydantic<3,>=1.10 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.867   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.925 Collecting pyjwt<3.0.0,>=2.10.1 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 9.942   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+2025-Jun-26 07:54:52.311985
+#18 9.993 Collecting pytest-mock<4.0.0,>=3.14.0 (from gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.01   Downloading pytest_mock-3.14.1-py3-none-any.whl.metadata (3.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.07 Collecting anyio (from httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.09   Downloading anyio-4.9.0-py3-none-any.whl.metadata (4.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.15 Collecting httpcore==1.* (from httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.16   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.20 Collecting h11>=0.16 (from httpcore==1.*->httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.22   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.26 Collecting h2<5,>=3 (from httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.28   Downloading h2-4.2.0-py3-none-any.whl.metadata (5.1 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.32 Collecting hyperframe<7,>=6.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.34   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.37 Collecting hpack<5,>=4.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.38   Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.42 Collecting deprecation<3.0.0,>=2.1.0 (from postgrest<1.2,>0.19->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.44   Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+2025-Jun-26 07:54:52.311985
+#18 10.52 Requirement already satisfied: packaging in /usr/lib/python3.12/site-packages (from deprecation<3.0.0,>=2.1.0->postgrest<1.2,>0.19->supabase>=1.3.0->-r scripts/requirements.txt (line 7)) (25.0)
+2025-Jun-26 07:54:52.311985
+#18 10.55 Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 10.56   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2025-Jun-26 07:54:52.311985
+#18 12.13 Collecting pydantic-core==2.33.2 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 12.15   Downloading pydantic_core-2.33.2-cp312-cp312-musllinux_1_1_x86_64.whl.metadata (6.8 kB)
+2025-Jun-26 07:54:52.311985
+#18 12.19 Collecting typing-extensions>=4.12.2 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 12.21   Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+2025-Jun-26 07:54:52.311985
+#18 12.23 Collecting typing-inspection>=0.4.0 (from pydantic<3,>=1.10->gotrue<3.0.0,>=2.11.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 12.25   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+2025-Jun-26 07:54:52.311985
+#18 13.53 Collecting aiohttp<4.0.0,>=3.12.13 (from realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 13.55   Downloading aiohttp-3.12.13-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (7.6 kB)
+2025-Jun-26 07:54:52.311985
+#18 13.78 Collecting websockets<16,>=11 (from realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 13.79   Downloading websockets-15.0.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (6.8 kB)
+2025-Jun-26 07:54:52.311985
+#18 13.83 Collecting six>=1.5 (from python-dateutil>=2.8.2->-r scripts/requirements.txt (line 12))
+2025-Jun-26 07:54:52.311985
+#18 13.85   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 13.89 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 13.91   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 13.94 Collecting aiosignal>=1.1.2 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 13.96   Downloading aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
+2025-Jun-26 07:54:52.311985
+#18 14.00 Collecting attrs>=17.3.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 14.01   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+2025-Jun-26 07:54:52.311985
+#18 14.31 Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 14.33   Downloading frozenlist-1.7.0-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (18 kB)
+2025-Jun-26 07:54:52.311985
+#18 14.81 Collecting multidict<7.0,>=4.5 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 14.82   Downloading multidict-6.5.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (5.3 kB)
+2025-Jun-26 07:54:52.311985
+#18 14.93 Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 14.95   Downloading propcache-0.3.2-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (12 kB)
+2025-Jun-26 07:54:52.311985
+#18 15.57 Collecting yarl<2.0,>=1.17.0 (from aiohttp<4.0.0,>=3.12.13->realtime<2.6.0,>=2.4.0->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 15.58   Downloading yarl-1.20.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (73 kB)
+2025-Jun-26 07:54:52.311985
+#18 15.65 Collecting strenum<0.5.0,>=0.4.15 (from supafunc<0.11,>=0.9->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 15.66   Downloading StrEnum-0.4.15-py3-none-any.whl.metadata (5.3 kB)
+2025-Jun-26 07:54:52.311985
+#18 15.76 Collecting iniconfig>=1 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
+2025-Jun-26 07:54:52.311985
+#18 15.78   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 15.81 Collecting pluggy<2,>=1.5 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
+2025-Jun-26 07:54:52.311985
+#18 15.82   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2025-Jun-26 07:54:52.311985
+#18 15.87 Collecting pygments>=2.7.2 (from pytest>=7.4.0->-r scripts/requirements.txt (line 25))
+2025-Jun-26 07:54:52.311985
+#18 15.89   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2025-Jun-26 07:54:52.311985
+#18 16.83 Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov>=4.1.0->-r scripts/requirements.txt (line 26))
+2025-Jun-26 07:54:52.311985
+#18 16.85   Downloading coverage-7.9.1-cp312-cp312-musllinux_1_2_x86_64.whl.metadata (8.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 16.92 Collecting et-xmlfile (from openpyxl>=3.1.0->-r scripts/requirements.txt (line 33))
+2025-Jun-26 07:54:52.311985
+#18 16.94   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.06 Collecting sniffio>=1.1 (from anyio->httpx<0.29,>=0.26->supabase>=1.3.0->-r scripts/requirements.txt (line 7))
+2025-Jun-26 07:54:52.311985
+#18 17.08   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.12 Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.14 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.16 Downloading charset_normalizer-3.4.2-cp312-cp312-musllinux_1_2_x86_64.whl (149 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.18 Downloading idna-3.10-py3-none-any.whl (70 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.20 Downloading pandas-2.3.0-cp312-cp312-musllinux_1_2_x86_64.whl (13.2 MB)
+2025-Jun-26 07:54:52.311985
+#18 17.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.2/13.2 MB 24.7 MB/s eta 0:00:00
+2025-Jun-26 07:54:52.311985
+#18 17.76 Downloading supabase-2.16.0-py3-none-any.whl (17 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.77 Downloading gotrue-2.12.2-py3-none-any.whl (43 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.79 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.81 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.83 Downloading h2-4.2.0-py3-none-any.whl (60 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.84 Downloading hpack-4.1.0-py3-none-any.whl (34 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.86 Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.88 Downloading postgrest-1.1.1-py3-none-any.whl (22 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.90 Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.91 Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+2025-Jun-26 07:54:52.311985
+#18 17.95 Downloading pydantic_core-2.33.2-cp312-cp312-musllinux_1_1_x86_64.whl (2.2 MB)
+2025-Jun-26 07:54:52.311985
+#18 18.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 24.6 MB/s eta 0:00:00
+2025-Jun-26 07:54:52.311985
+#18 18.06 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.08 Downloading pytest_mock-3.14.1-py3-none-any.whl (9.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.10 Downloading realtime-2.5.2-py3-none-any.whl (21 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.11 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.14 Downloading aiohttp-3.12.13-cp312-cp312-musllinux_1_2_x86_64.whl (1.7 MB)
+2025-Jun-26 07:54:52.311985
+#18 18.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 25.2 MB/s eta 0:00:00
+2025-Jun-26 07:54:52.311985
+#18 18.23 Downloading multidict-6.5.1-cp312-cp312-musllinux_1_2_x86_64.whl (246 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.25 Downloading storage3-0.12.0-py3-none-any.whl (18 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.27 Downloading supafunc-0.10.1-py3-none-any.whl (8.0 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.29 Downloading StrEnum-0.4.15-py3-none-any.whl (8.9 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.31 Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.33 Downloading websockets-15.0.1-cp312-cp312-musllinux_1_2_x86_64.whl (182 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.35 Downloading yarl-1.20.1-cp312-cp312-musllinux_1_2_x86_64.whl (374 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.39 Downloading schedule-1.2.2-py3-none-any.whl (12 kB)
+2025-Jun-26 07:54:52.311985
+#18 18.40 Downloading numpy-2.3.1-cp312-cp312-musllinux_1_2_x86_64.whl (18.4 MB)
+2025-Jun-26 07:54:52.311985
+#18 19.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.4/18.4 MB 24.7 MB/s eta 0:00:00
+2025-Jun-26 07:54:52.311985
+#18 19.17 Downloading certifi-2025.6.15-py3-none-any.whl (157 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.19 Downloading python_json_logger-3.3.0-py3-none-any.whl (15 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.20 Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.22 Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.25 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.27 Downloading pytest_cov-6.2.1-py3-none-any.whl (24 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.29 Downloading requests_mock-1.12.1-py2.py3-none-any.whl (27 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.30 Downloading eurostat-1.1.1-py3-none-any.whl (16 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.32 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.35 Downloading xlsxwriter-3.2.5-py3-none-any.whl (172 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.37 Downloading memory_profiler-0.61.0-py3-none-any.whl (31 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.39 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.41 Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.43 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.44 Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.46 Downloading coverage-7.9.1-cp312-cp312-musllinux_1_2_x86_64.whl (244 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.49 Downloading frozenlist-1.7.0-cp312-cp312-musllinux_1_2_x86_64.whl (237 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.51 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.53 Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.55 Downloading propcache-0.3.2-cp312-cp312-musllinux_1_2_x86_64.whl (222 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.58 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2025-Jun-26 07:54:52.311985
+#18 19.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.9 MB/s eta 0:00:00
+2025-Jun-26 07:54:52.311985
+#18 19.65 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.68 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.70 Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.72 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.75 Downloading anyio-4.9.0-py3-none-any.whl (100 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.76 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2025-Jun-26 07:54:52.311985
+#18 19.78 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2025-Jun-26 07:54:52.311985
+#18 20.06 Building wheels for collected packages: psutil
+2025-Jun-26 07:54:52.311985
+#18 20.06   Building wheel for psutil (pyproject.toml): started
+2025-Jun-26 07:54:52.311985
+#18 24.33   Building wheel for psutil (pyproject.toml): finished with status 'done'
+2025-Jun-26 07:54:52.311985
+#18 24.33   Created wheel for psutil: filename=psutil-7.0.0-cp36-abi3-linux_x86_64.whl size=273928 sha256=e530817c85e66ae6dcbf0fa94f8852b663fcd6c46e3892e930dda15631dcee6c
+2025-Jun-26 07:54:52.311985
+#18 24.34   Stored in directory: /tmp/pip-ephem-wheel-cache-jq99fs21/wheels/0c/58/48/ccefe23b905f1dd76f8444f328ff2cfb1d4920a081f9d5d03d
+2025-Jun-26 07:54:52.311985
+#18 24.34 Successfully built psutil
+2025-Jun-26 07:54:52.311985
+#18 24.74 Installing collected packages: strenum, pytz, xlsxwriter, websockets, urllib3, tzdata, typing-extensions, sniffio, six, schedule, python-json-logger, python-dotenv, pyjwt, pygments, psutil, propcache, pluggy, numpy, multidict, iniconfig, idna, hyperframe, hpack, h11, frozenlist, et-xmlfile, deprecation, coverage, charset_normalizer, certifi, attrs, annotated-types, aiohappyeyeballs, yarl, typing-inspection, requests, python-dateutil, pytest, pydantic-core, openpyxl, memory-profiler, httpcore, h2, anyio, aiosignal, requests-mock, pytest-mock, pytest-cov, pydantic, pandas, httpx, aiohttp, realtime, eurostat, supafunc, storage3, postgrest, gotrue, supabase
+2025-Jun-26 07:54:52.311985
+#18 61.69
+2025-Jun-26 07:54:52.311985
+#18 61.72 Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.12.13 aiosignal-1.3.2 annotated-types-0.7.0 anyio-4.9.0 attrs-25.3.0 certifi-2025.6.15 charset_normalizer-3.4.2 coverage-7.9.1 deprecation-2.1.0 et-xmlfile-2.0.0 eurostat-1.1.1 frozenlist-1.7.0 gotrue-2.12.2 h11-0.16.0 h2-4.2.0 hpack-4.1.0 httpcore-1.0.9 httpx-0.28.1 hyperframe-6.1.0 idna-3.10 iniconfig-2.1.0 memory-profiler-0.61.0 multidict-6.5.1 numpy-2.3.1 openpyxl-3.1.5 pandas-2.3.0 pluggy-1.6.0 postgrest-1.1.1 propcache-0.3.2 psutil-7.0.0 pydantic-2.11.7 pydantic-core-2.33.2 pygments-2.19.2 pyjwt-2.10.1 pytest-8.4.1 pytest-cov-6.2.1 pytest-mock-3.14.1 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 python-json-logger-3.3.0 pytz-2025.2 realtime-2.5.2 requests-2.32.4 requests-mock-1.12.1 schedule-1.2.2 six-1.17.0 sniffio-1.3.1 storage3-0.12.0 strenum-0.4.15 supabase-2.16.0 supafunc-0.10.1 typing-extensions-4.14.0 typing-inspection-0.4.1 tzdata-2025.2 urllib3-2.5.0 websockets-15.0.1 xlsxwriter-3.2.5 yarl-1.20.1
+2025-Jun-26 07:54:52.311985
+#18 61.72 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2025-Jun-26 07:54:52.311985
+#18 DONE 64.3s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
+#19 [builder 1/5] WORKDIR /app
+2025-Jun-26 07:54:52.311985
+#19 CACHED
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #20 [builder 2/5] COPY --from=installer /app /app
-2025-Jun-26 07:40:22.998040
-#20 DONE 45.5s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#20 DONE 32.7s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #21 [builder 3/5] COPY --from=installer /usr/lib/python3.12/site-packages /usr/lib/python3.12/site-packages
-2025-Jun-26 07:40:22.998040
-#21 DONE 13.0s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#21 DONE 9.0s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #22 [builder 4/5] COPY --from=pruner /app/out/full/ .
-2025-Jun-26 07:40:22.998040
-#22 DONE 0.2s
-2025-Jun-26 07:40:22.998040
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#22 DONE 0.1s
+2025-Jun-26 07:54:52.311985
+2025-Jun-26 07:54:52.311985
 #23 [builder 5/5] RUN turbo run build --scope=@stats-insee/web
-2025-Jun-26 07:40:22.998040
-#23 0.469  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
-2025-Jun-26 07:40:22.998040
-#23 0.486  ERROR  unexpected argument '--scope' found
-2025-Jun-26 07:40:22.998040
-#23 0.486
-2025-Jun-26 07:40:22.998040
-#23 0.486   tip: to pass '--scope' as a value, use '-- --scope'
-2025-Jun-26 07:40:22.998040
-#23 0.486
-2025-Jun-26 07:40:22.998040
-#23 0.486 Usage: turbo run <--cache-dir <CACHE_DIR>|--concurrency <CONCURRENCY>|--continue[=<CONTINUE>]|--single-package|--framework-inference [<BOOL>]|--global-deps <GLOBAL_DEPS>|--env-mode [<ENV_MODE>]|--filter <FILTER>|--affected|--output-logs <OUTPUT_LOGS>|--log-order <LOG_ORDER>|--only|--pkg-inference-root <PKG_INFERENCE_ROOT>|--log-prefix <LOG_PREFIX>|TASKS|PASS_THROUGH_ARGS>
-2025-Jun-26 07:40:22.998040
-#23 0.486
-2025-Jun-26 07:40:22.998040
-#23 0.486 For more information, try '--help'.
-2025-Jun-26 07:40:22.998040
-#23 0.486
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+#23 0.631  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
+2025-Jun-26 07:54:52.311985
+#23 0.648  ERROR  unexpected argument '--scope' found
+2025-Jun-26 07:54:52.311985
+#23 0.648
+2025-Jun-26 07:54:52.311985
+#23 0.648   tip: to pass '--scope' as a value, use '-- --scope'
+2025-Jun-26 07:54:52.311985
+#23 0.648
+2025-Jun-26 07:54:52.311985
+#23 0.648 Usage: turbo run <--cache-dir <CACHE_DIR>|--concurrency <CONCURRENCY>|--continue[=<CONTINUE>]|--single-package|--framework-inference [<BOOL>]|--global-deps <GLOBAL_DEPS>|--env-mode [<ENV_MODE>]|--filter <FILTER>|--affected|--output-logs <OUTPUT_LOGS>|--log-order <LOG_ORDER>|--only|--pkg-inference-root <PKG_INFERENCE_ROOT>|--log-prefix <LOG_PREFIX>|TASKS|PASS_THROUGH_ARGS>
+2025-Jun-26 07:54:52.311985
+#23 0.648
+2025-Jun-26 07:54:52.311985
+#23 0.648 For more information, try '--help'.
+2025-Jun-26 07:54:52.311985
+#23 0.648
+2025-Jun-26 07:54:52.311985
 #23 ERROR: process "/bin/sh -c turbo run build --scope=@stats-insee/web" did not complete successfully: exit code: 1
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 ------
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 > [builder 5/5] RUN turbo run build --scope=@stats-insee/web:
-2025-Jun-26 07:40:22.998040
-0.469  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
-2025-Jun-26 07:40:22.998040
-0.486  ERROR  unexpected argument '--scope' found
-2025-Jun-26 07:40:22.998040
-0.486
-2025-Jun-26 07:40:22.998040
-0.486   tip: to pass '--scope' as a value, use '-- --scope'
-2025-Jun-26 07:40:22.998040
-0.486
-2025-Jun-26 07:40:22.998040
-0.486 Usage: turbo run <--cache-dir <CACHE_DIR>|--concurrency <CONCURRENCY>|--continue[=<CONTINUE>]|--single-package|--framework-inference [<BOOL>]|--global-deps <GLOBAL_DEPS>|--env-mode [<ENV_MODE>]|--filter <FILTER>|--affected|--output-logs <OUTPUT_LOGS>|--log-order <LOG_ORDER>|--only|--pkg-inference-root <PKG_INFERENCE_ROOT>|--log-prefix <LOG_PREFIX>|TASKS|PASS_THROUGH_ARGS>
-2025-Jun-26 07:40:22.998040
-0.486
-2025-Jun-26 07:40:22.998040
-0.486 For more information, try '--help'.
-2025-Jun-26 07:40:22.998040
-0.486
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+0.631  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
+2025-Jun-26 07:54:52.311985
+0.648  ERROR  unexpected argument '--scope' found
+2025-Jun-26 07:54:52.311985
+0.648
+2025-Jun-26 07:54:52.311985
+0.648   tip: to pass '--scope' as a value, use '-- --scope'
+2025-Jun-26 07:54:52.311985
+0.648
+2025-Jun-26 07:54:52.311985
+0.648 Usage: turbo run <--cache-dir <CACHE_DIR>|--concurrency <CONCURRENCY>|--continue[=<CONTINUE>]|--single-package|--framework-inference [<BOOL>]|--global-deps <GLOBAL_DEPS>|--env-mode [<ENV_MODE>]|--filter <FILTER>|--affected|--output-logs <OUTPUT_LOGS>|--log-order <LOG_ORDER>|--only|--pkg-inference-root <PKG_INFERENCE_ROOT>|--log-prefix <LOG_PREFIX>|TASKS|PASS_THROUGH_ARGS>
+2025-Jun-26 07:54:52.311985
+0.648
+2025-Jun-26 07:54:52.311985
+0.648 For more information, try '--help'.
+2025-Jun-26 07:54:52.311985
+0.648
+2025-Jun-26 07:54:52.311985
 ------
-2025-Jun-26 07:40:22.998040
-Dockerfile:46
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+Dockerfile:47
+2025-Jun-26 07:54:52.311985
 --------------------
-2025-Jun-26 07:40:22.998040
-44 |     # Build l'app web uniquement
-2025-Jun-26 07:40:22.998040
-45 |     ENV NODE_ENV=production
-2025-Jun-26 07:40:22.998040
-46 | >>> RUN turbo run build --scope=@stats-insee/web
-2025-Jun-26 07:40:22.998040
-47 |
-2025-Jun-26 07:40:22.998040
-48 |     # -------- Étape 5 : Runner final (léger) --------
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
+45 |     # Build l'app web uniquement
+2025-Jun-26 07:54:52.311985
+46 |     ENV NODE_ENV=production
+2025-Jun-26 07:54:52.311985
+47 | >>> RUN turbo run build --scope=@stats-insee/web
+2025-Jun-26 07:54:52.311985
+48 |
+2025-Jun-26 07:54:52.311985
+49 |     # -------- Étape 5 : Runner final (léger) --------
+2025-Jun-26 07:54:52.311985
 --------------------
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 ERROR: failed to solve: process "/bin/sh -c turbo run build --scope=@stats-insee/web" did not complete successfully: exit code: 1
-2025-Jun-26 07:40:22.998040
+2025-Jun-26 07:54:52.311985
 exit status 1
-2025-Jun-26 07:40:23.015630
+2025-Jun-26 07:54:52.332283
 Deployment failed. Removing the new version of your application.
-2025-Jun-26 07:40:23.689170
-Gracefully shutting down build container: v04w4o0wgks040g0c8ocskoo
+2025-Jun-26 07:54:53.058277
+Gracefully shutting down build container: e4oswsk408goksgo4wckocgc
