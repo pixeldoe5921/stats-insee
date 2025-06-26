@@ -7,7 +7,7 @@ RUN npm i -g turbo pnpm
 # -------- Étape 2 : Prune du monorepo --------
 FROM base AS pruner
 COPY . .
-RUN turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts
+RUN turbo prune --docker --scope @stats-insee/web
 
 # -------- Étape 3 : Installation JS + Python + dépendances natives --------
 FROM base AS installer

@@ -1,221 +1,226 @@
-2025-Jun-26 07:05:49.048043
+2025-Jun-26 07:13:17.110257
 Starting deployment of pixeldoe5921/stats-insee:main to localhost.
-2025-Jun-26 07:05:49.297387
+2025-Jun-26 07:13:17.342024
 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.8.
-2025-Jun-26 07:05:51.138209
+2025-Jun-26 07:13:19.237118
 ----------------------------------------
-2025-Jun-26 07:05:51.147218
-Importing pixeldoe5921/stats-insee:main (commit sha HEAD) to /artifacts/d8go0okwwwcwkkgg80cg4sk0.
-2025-Jun-26 07:05:54.935180
+2025-Jun-26 07:13:19.243459
+Importing pixeldoe5921/stats-insee:main (commit sha HEAD) to /artifacts/mo448sko8kckok8s84w4os8s.
+2025-Jun-26 07:13:22.642837
 ----------------------------------------
-2025-Jun-26 07:05:54.942014
+2025-Jun-26 07:13:22.653181
 Building docker image started.
-2025-Jun-26 07:05:54.948744
+2025-Jun-26 07:13:22.658755
 To check the current progress, click on Show Debug Logs.
-2025-Jun-26 07:06:06.070644
+2025-Jun-26 07:13:40.028263
 Oops something is not okay, are you okay? 😢
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #0 building with "default" instance using docker driver
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #1 [internal] load build definition from Dockerfile
-2025-Jun-26 07:06:06.082185
-#1 transferring dockerfile: 1.99kB done
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#1 transferring dockerfile: 1.90kB done
+2025-Jun-26 07:13:40.039873
 #1 DONE 0.0s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #2 [internal] load metadata for docker.io/library/node:20-alpine
-2025-Jun-26 07:06:06.082185
-#2 DONE 0.8s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#2 DONE 1.0s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #3 [internal] load .dockerignore
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #3 transferring context: 2B done
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #3 DONE 0.0s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #4 [base 1/4] FROM docker.io/library/node:20-alpine@sha256:674181320f4f94582c6182eaa151bf92c6744d478be0f1d12db804b7d59b2d11
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #4 DONE 0.0s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #5 [base 2/4] WORKDIR /app
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #5 CACHED
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #6 [internal] load build context
-2025-Jun-26 07:06:06.082185
-#6 transferring context: 1.08MB 0.1s done
-2025-Jun-26 07:06:06.082185
-#6 DONE 0.1s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#6 transferring context: 1.03MB 0.1s done
+2025-Jun-26 07:13:40.039873
+#6 DONE 0.2s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #7 [runner 3/4] RUN addgroup --system --gid 1001 nodejs  && adduser --system --uid 1001 nextjs
-2025-Jun-26 07:06:06.082185
-#7 DONE 0.2s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#7 DONE 0.3s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #8 [base 3/4] RUN apk add --no-cache git
-2025-Jun-26 07:06:06.082185
-#8 0.193 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:06:06.082185
-#8 0.416 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:06:06.082185
-#8 1.141 (1/12) Installing brotli-libs (1.1.0-r2)
-2025-Jun-26 07:06:06.082185
-#8 1.186 (2/12) Installing c-ares (1.34.5-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.213 (3/12) Installing libunistring (1.3-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.281 (4/12) Installing libidn2 (2.3.7-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.308 (5/12) Installing nghttp2-libs (1.65.0-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.331 (6/12) Installing libpsl (0.21.5-r3)
-2025-Jun-26 07:06:06.082185
-#8 1.354 (7/12) Installing zstd-libs (1.5.7-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.390 (8/12) Installing libcurl (8.14.1-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.425 (9/12) Installing libexpat (2.7.1-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.450 (10/12) Installing pcre2 (10.43-r1)
-2025-Jun-26 07:06:06.082185
-#8 1.485 (11/12) Installing git (2.49.0-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.663 (12/12) Installing git-init-template (2.49.0-r0)
-2025-Jun-26 07:06:06.082185
-#8 1.686 Executing busybox-1.37.0-r18.trigger
-2025-Jun-26 07:06:06.082185
-#8 1.710 OK: 22 MiB in 30 packages
-2025-Jun-26 07:06:06.082185
-#8 DONE 2.0s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#8 0.218 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:13:40.039873
+#8 8.092 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:13:40.039873
+#8 8.839 (1/12) Installing brotli-libs (1.1.0-r2)
+2025-Jun-26 07:13:40.039873
+#8 8.885 (2/12) Installing c-ares (1.34.5-r0)
+2025-Jun-26 07:13:40.039873
+#8 8.915 (3/12) Installing libunistring (1.3-r0)
+2025-Jun-26 07:13:40.039873
+#8 8.969 (4/12) Installing libidn2 (2.3.7-r0)
+2025-Jun-26 07:13:40.039873
+#8 8.999 (5/12) Installing nghttp2-libs (1.65.0-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.028 (6/12) Installing libpsl (0.21.5-r3)
+2025-Jun-26 07:13:40.039873
+#8 9.052 (7/12) Installing zstd-libs (1.5.7-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.093 (8/12) Installing libcurl (8.14.1-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.133 (9/12) Installing libexpat (2.7.1-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.159 (10/12) Installing pcre2 (10.43-r1)
+2025-Jun-26 07:13:40.039873
+#8 9.195 (11/12) Installing git (2.49.0-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.378 (12/12) Installing git-init-template (2.49.0-r0)
+2025-Jun-26 07:13:40.039873
+#8 9.404 Executing busybox-1.37.0-r18.trigger
+2025-Jun-26 07:13:40.039873
+#8 9.428 OK: 22 MiB in 30 packages
+2025-Jun-26 07:13:40.039873
+#8 DONE 9.7s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #9 [base 4/4] RUN npm i -g turbo pnpm
-2025-Jun-26 07:06:06.082185
-#9 5.673
-2025-Jun-26 07:06:06.082185
-#9 5.673 added 3 packages in 5s
-2025-Jun-26 07:06:06.082185
-#9 5.673
-2025-Jun-26 07:06:06.082185
-#9 5.673 1 package is looking for funding
-2025-Jun-26 07:06:06.082185
-#9 5.673   run `npm fund` for details
-2025-Jun-26 07:06:06.082185
-#9 5.677 npm notice
-2025-Jun-26 07:06:06.082185
-#9 5.677 npm notice New major version of npm available! 10.8.2 -> 11.4.2
-2025-Jun-26 07:06:06.082185
-#9 5.677 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
-2025-Jun-26 07:06:06.082185
-#9 5.677 npm notice To update run: npm install -g npm@11.4.2
-2025-Jun-26 07:06:06.082185
-#9 5.677 npm notice
-2025-Jun-26 07:06:06.082185
-#9 DONE 5.8s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#9 4.479
+2025-Jun-26 07:13:40.039873
+#9 4.479 added 3 packages in 4s
+2025-Jun-26 07:13:40.039873
+#9 4.479
+2025-Jun-26 07:13:40.039873
+#9 4.479 1 package is looking for funding
+2025-Jun-26 07:13:40.039873
+#9 4.479   run `npm fund` for details
+2025-Jun-26 07:13:40.039873
+#9 4.481 npm notice
+2025-Jun-26 07:13:40.039873
+#9 4.481 npm notice New major version of npm available! 10.8.2 -> 11.4.2
+2025-Jun-26 07:13:40.039873
+#9 4.481 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
+2025-Jun-26 07:13:40.039873
+#9 4.481 npm notice To update run: npm install -g npm@11.4.2
+2025-Jun-26 07:13:40.039873
+#9 4.481 npm notice
+2025-Jun-26 07:13:40.039873
+#9 DONE 4.6s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #10 [builder 1/5] WORKDIR /app
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 #10 DONE 0.1s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
 #11 [pruner 1/2] COPY . .
-2025-Jun-26 07:06:06.082185
-#11 DONE 0.2s
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
-#12 [installer 1/7] RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers     python3-dev pkgconfig pixman-dev cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
-2025-Jun-26 07:06:06.082185
-#12 0.265 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:06:06.082185
-#12 0.475 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+#11 DONE 0.1s
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
+#12 [installer 1/7] RUN apk add --no-cache   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
+2025-Jun-26 07:13:40.039873
+#12 0.175 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:13:40.039873
+#12 ...
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
+#13 [pruner 2/2] RUN turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts
+2025-Jun-26 07:13:40.039873
+#13 0.226  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
+2025-Jun-26 07:13:40.039873
+#13 0.242
+2025-Jun-26 07:13:40.039873
+#13 0.242 Attention:
+2025-Jun-26 07:13:40.039873
+#13 0.242 Turborepo now collects completely anonymous telemetry regarding usage.
+2025-Jun-26 07:13:40.039873
+#13 0.242 This information is used to shape the Turborepo roadmap and prioritize features.
+2025-Jun-26 07:13:40.039873
+#13 0.242 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-Jun-26 07:13:40.039873
+#13 0.242 https://turborepo.com/docs/telemetry
+2025-Jun-26 07:13:40.039873
+#13 0.242
+2025-Jun-26 07:13:40.039873
+#13 0.242 turbo 2.5.4
+2025-Jun-26 07:13:40.039873
+#13 0.242
+2025-Jun-26 07:13:40.039873
+#13 0.321   x Invalid scope. Package with name @stats-insee/scripts in `package.json`
+2025-Jun-26 07:13:40.039873
+#13 0.321   | not found.
+2025-Jun-26 07:13:40.039873
+#13 0.321
+2025-Jun-26 07:13:40.039873
+#13 ERROR: process "/bin/sh -c turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts" did not complete successfully: exit code: 1
+2025-Jun-26 07:13:40.039873
+2025-Jun-26 07:13:40.039873
+#12 [installer 1/7] RUN apk add --no-cache   python3 py3-pip gcc musl-dev linux-headers   python3-dev pkgconfig pixman-dev cairo-dev   pango-dev libjpeg-turbo-dev giflib-dev
+2025-Jun-26 07:13:40.039873
+#12 0.387 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+2025-Jun-26 07:13:40.039873
 #12 CANCELED
-2025-Jun-26 07:06:06.082185
-2025-Jun-26 07:06:06.082185
-#13 [pruner 2/2] RUN turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker
-2025-Jun-26 07:06:06.082185
-#13 0.310  WARNING  No locally installed `turbo` found. Using version: 2.5.4.
-2025-Jun-26 07:06:06.082185
-#13 0.327
-2025-Jun-26 07:06:06.082185
-#13 0.327 Attention:
-2025-Jun-26 07:06:06.082185
-#13 0.327 Turborepo now collects completely anonymous telemetry regarding usage.
-2025-Jun-26 07:06:06.082185
-#13 0.327 This information is used to shape the Turborepo roadmap and prioritize features.
-2025-Jun-26 07:06:06.082185
-#13 0.327 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-2025-Jun-26 07:06:06.082185
-#13 0.327 https://turborepo.com/docs/telemetry
-2025-Jun-26 07:06:06.082185
-#13 0.327
-2025-Jun-26 07:06:06.082185
-#13 0.327 turbo 2.5.4
-2025-Jun-26 07:06:06.082185
-#13 0.327
-2025-Jun-26 07:06:06.082185
-#13 0.483   x Invalid scope. Package with name --scope=@stats-insee/web in
-2025-Jun-26 07:06:06.082185
-#13 0.483   | `package.json` not found.
-2025-Jun-26 07:06:06.082185
-#13 0.483
-2025-Jun-26 07:06:06.082185
-#13 ERROR: process "/bin/sh -c turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker" did not complete successfully: exit code: 1
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 ------
-2025-Jun-26 07:06:06.082185
-> [pruner 2/2] RUN turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker:
-2025-Jun-26 07:06:06.082185
-0.327 Turborepo now collects completely anonymous telemetry regarding usage.
-2025-Jun-26 07:06:06.082185
-0.327 This information is used to shape the Turborepo roadmap and prioritize features.
-2025-Jun-26 07:06:06.082185
-0.327 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-2025-Jun-26 07:06:06.082185
-0.327 https://turborepo.com/docs/telemetry
-2025-Jun-26 07:06:06.082185
-0.327
-2025-Jun-26 07:06:06.082185
-0.327 turbo 2.5.4
-2025-Jun-26 07:06:06.082185
-0.327
-2025-Jun-26 07:06:06.082185
-0.483   x Invalid scope. Package with name --scope=@stats-insee/web in
-2025-Jun-26 07:06:06.082185
-0.483   | `package.json` not found.
-2025-Jun-26 07:06:06.082185
-0.483
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+> [pruner 2/2] RUN turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts:
+2025-Jun-26 07:13:40.039873
+0.242 Turborepo now collects completely anonymous telemetry regarding usage.
+2025-Jun-26 07:13:40.039873
+0.242 This information is used to shape the Turborepo roadmap and prioritize features.
+2025-Jun-26 07:13:40.039873
+0.242 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-Jun-26 07:13:40.039873
+0.242 https://turborepo.com/docs/telemetry
+2025-Jun-26 07:13:40.039873
+0.242
+2025-Jun-26 07:13:40.039873
+0.242 turbo 2.5.4
+2025-Jun-26 07:13:40.039873
+0.242
+2025-Jun-26 07:13:40.039873
+0.321   x Invalid scope. Package with name @stats-insee/scripts in `package.json`
+2025-Jun-26 07:13:40.039873
+0.321   | not found.
+2025-Jun-26 07:13:40.039873
+0.321
+2025-Jun-26 07:13:40.039873
 ------
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 Dockerfile:10
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 --------------------
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 8 |     FROM base AS pruner
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
 9 |     COPY . .
-2025-Jun-26 07:06:06.082185
-10 | >>> RUN turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+10 | >>> RUN turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts
+2025-Jun-26 07:13:40.039873
 11 |
-2025-Jun-26 07:06:06.082185
-12 |     # -------- Étape 3 : installer les dépendances Python et JS --------
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+12 |     # -------- Étape 3 : Installation JS + Python + dépendances natives --------
+2025-Jun-26 07:13:40.039873
 --------------------
-2025-Jun-26 07:06:06.082185
-ERROR: failed to solve: process "/bin/sh -c turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker" did not complete successfully: exit code: 1
-2025-Jun-26 07:06:06.082185
+2025-Jun-26 07:13:40.039873
+ERROR: failed to solve: process "/bin/sh -c turbo prune --docker --scope @stats-insee/web --scope @stats-insee/scripts" did not complete successfully: exit code: 1
+2025-Jun-26 07:13:40.039873
 exit status 1
-2025-Jun-26 07:06:06.095780
+2025-Jun-26 07:13:40.050427
 Deployment failed. Removing the new version of your application.
-2025-Jun-26 07:06:06.676390
-Gracefully shutting down build container: d8go0okwwwcwkkgg80cg4sk0
+2025-Jun-26 07:13:40.633781
+Gracefully shutting down build container: mo448sko8kckok8s84w4os8s
