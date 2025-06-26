@@ -43,7 +43,7 @@ COPY --from=pruner /app/out/full/ .
 
 # Build l'app web uniquement
 ENV NODE_ENV=production
-RUN turbo run build -- --scope= @stats-insee/web
+RUN turbo run build -- --scope=@stats-insee/web
 
 # -------- Étape 5 : Runner final (léger) --------
 FROM node:20-alpine AS runner
