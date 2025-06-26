@@ -1,80 +1,62 @@
-# Dockerfile pour Monorepo Turborepo avec pnpm - Corrigé
-
-# =======================================
-# 1. Base: Image de base avec Node.js et pnpm/turbo
-# =======================================
+# -------- Étape 1 : base commune avec turbo & pnpm --------
 FROM node:20-alpine AS base
-RUN npm i -g turbo pnpm
 WORKDIR /app
+RUN apk add --no-cache git
+RUN npm i -g turbo pnpm
 
-# =======================================
-# 2. Pruner: Crée une version minimale du repo
-# =======================================
+# -------- Étape 2 : prune le monorepo pour ne garder que les apps utiles --------
 FROM base AS pruner
 COPY . .
-RUN turbo prune --scope=@stats-insee/web --docker
+RUN turbo prune -- --scope=@stats-insee/web --scope=@stats-insee/scripts --docker
 
-# =======================================
-# 3. Installer: Installe toutes les dépendances
-# =======================================
+# -------- Étape 3 : installer les dépendances Python et JS --------
 FROM base AS installer
-# Installer les outils de build Python
-RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers python3-dev
 
-# Copier les fichiers de dépendances depuis la version "prunée"
+# Dépendances système pour Python + canvas
+RUN apk add --no-cache python3 py3-pip gcc musl-dev linux-headers     python3-dev pkgconfig pixman-dev cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
+
+WORKDIR /app
+
+# Copier uniquement ce que le prune a gardé
 COPY --from=pruner /app/out/json/ .
 COPY --from=pruner /app/out/pnpm-lock.yaml .
+COPY --from=pruner /app/scripts/ ./scripts/
 
-# Installer les dépendances Node.js
+# Installer les dépendances JS (avec cache lockfile)
 RUN pnpm install --frozen-lockfile
 
-# Copier les scripts Python depuis le contexte original (Ta Solution 3)
-COPY --from=pruner /app/scripts/ ./scripts/
 # Installer les dépendances Python
 RUN pip3 install --no-cache-dir --break-system-packages -r scripts/requirements.txt
 
-# =======================================
-# 4. Builder: Compile l'application Next.js
-# =======================================
+# -------- Étape 4 : construire l'app avec turbo --------
 FROM base AS builder
-# Copier les dépendances Node et Python installées
-COPY --from=installer /app/ .
-# Copier le code source "pruné"
+WORKDIR /app
+
+# Copier tout ce qui a été installé
+COPY --from=installer /app /app
+COPY --from=installer /usr/lib/python3.12/site-packages /usr/lib/python3.12/site-packages
+
+# Prune full pour le build final (si nécessaire)
 COPY --from=pruner /app/out/full/ .
 
-# Lancer le build pour l'application 'web'
+# Build ciblé pour l'app web
 ENV NODE_ENV=production
-RUN turbo run build --scope=@stats-insee/web
+RUN turbo run build -- --scope=@stats-insee/web
 
-# =======================================
-# 5. Runner: Image finale de production
-# =======================================
+# -------- Étape 5 : runner final pour exécution --------
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Créer un utilisateur non-root pour la sécurité
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Ajout user non-root (bonne pratique)
+RUN addgroup --system --gid 1001 nodejs \
+ && adduser --system --uid 1001 nextjs
 
-# Installer uniquement le runtime Python
-RUN apk add --no-cache python3
+# Copier le build final
+COPY --from=builder /app .
 
-# Copier les dépendances Python pré-installées depuis l'étage 'installer'
-COPY --from=installer /usr/lib/python3.12/site-packages /usr/lib/python3.12/site-packages
-# Copier les scripts Python
-COPY --from=builder /app/scripts ./scripts
-
-# Copier l'application compilée en mode standalone
-COPY --from=builder /app/apps/web/.next/standalone ./
-# Copier les assets statiques
-COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
-
-USER nextjs
+# Exposer si nécessaire
 EXPOSE 3000
 
-# Corriger la syntaxe ENV (Ton Bonus)
-ENV PORT=3000
-ENV NODE_ENV=production
-
-# Lancer l'application
-CMD ["node", "server.js"]
+# Démarrage (à adapter selon framework)
+CMD ["node", "apps/web/server.js"]
+# ou pour Next.js : CMD ["pnpm", "start"] si tu utilises un custom server
